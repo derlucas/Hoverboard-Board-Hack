@@ -1,32 +1,30 @@
-ARM GAS  /tmp/ccCKUA4O.s 			page 1
+ARM GAS  /tmp/ccz85a5A.s 			page 1
 
 
-   1              		.syntax unified
-   2              		.cpu cortex-m3
-   3              		.fpu softvfp
-   4              		.eabi_attribute 20, 1
-   5              		.eabi_attribute 21, 1
-   6              		.eabi_attribute 23, 3
-   7              		.eabi_attribute 24, 1
-   8              		.eabi_attribute 25, 1
-   9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
-  11              		.eabi_attribute 34, 1
-  12              		.eabi_attribute 18, 4
-  13              		.thumb
-  14              		.syntax unified
-  15              		.file	"pid.c"
-  16              		.text
-  17              	.Ltext0:
-  18              		.cfi_sections	.debug_frame
-  19              		.section	.text.PID_init,"ax",%progbits
-  20              		.align	2
-  21              		.global	PID_init
-  22              		.thumb
-  23              		.thumb_func
-  25              	PID_init:
-  26              	.LFB64:
-  27              		.file 1 "./Src/pid.c"
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"pid.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.PID_init,"ax",%progbits
+  16              		.align	1
+  17              		.global	PID_init
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	PID_init:
+  24              	.LFB66:
+  25              		.file 1 "./Src/pid.c"
    1:./Src/pid.c   **** #include "pid.h"
    2:./Src/pid.c   **** 
    3:./Src/pid.c   **** TIM_HandleTypeDef Tim3PID;
@@ -38,258 +36,278 @@ ARM GAS  /tmp/ccCKUA4O.s 			page 1
    9:./Src/pid.c   **** 
   10:./Src/pid.c   **** void PID_init(uint16_t min, uint16_t max)
   11:./Src/pid.c   **** {
-  28              		.loc 1 11 0
-  29              		.cfi_startproc
-  30              		@ args = 0, pretend = 0, frame = 32
-  31              		@ frame_needed = 0, uses_anonymous_args = 0
-  32              	.LVL0:
-  33 0000 70B5     		push	{r4, r5, r6, lr}
-  34              	.LCFI0:
-  35              		.cfi_def_cfa_offset 16
-  36              		.cfi_offset 4, -16
-  37              		.cfi_offset 5, -12
-  38              		.cfi_offset 6, -8
-  39              		.cfi_offset 14, -4
-  40 0002 88B0     		sub	sp, sp, #32
-  41              	.LCFI1:
-  42              		.cfi_def_cfa_offset 48
-  43 0004 0646     		mov	r6, r0
-  44 0006 0D46     		mov	r5, r1
-  45              	.LBB2:
+  26              		.loc 1 11 0
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 32
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30              	.LVL0:
+  31 0000 70B5     		push	{r4, r5, r6, lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 16
+  34              		.cfi_offset 4, -16
+  35              		.cfi_offset 5, -12
+  36              		.cfi_offset 6, -8
+  37              		.cfi_offset 14, -4
+  38 0002 88B0     		sub	sp, sp, #32
+  39              	.LCFI1:
+  40              		.cfi_def_cfa_offset 48
+  41 0004 0646     		mov	r6, r0
+  42 0006 0D46     		mov	r5, r1
+  43              	.LBB2:
   12:./Src/pid.c   ****   TIM_ClockConfigTypeDef sClockSourceConfig;
   13:./Src/pid.c   ****   TIM_MasterConfigTypeDef sMasterConfig;
-ARM GAS  /tmp/ccCKUA4O.s 			page 2
-
-
   14:./Src/pid.c   ****     
   15:./Src/pid.c   ****   __HAL_RCC_TIM3_CLK_ENABLE();
-  46              		.loc 1 15 0
-  47 0008 244B     		ldr	r3, .L5
-  48 000a DA69     		ldr	r2, [r3, #28]
-  49 000c 42F00202 		orr	r2, r2, #2
-  50 0010 DA61     		str	r2, [r3, #28]
-  51 0012 DB69     		ldr	r3, [r3, #28]
-  52 0014 03F00203 		and	r3, r3, #2
-  53 0018 0193     		str	r3, [sp, #4]
-  54 001a 019B     		ldr	r3, [sp, #4]
-  55              	.LBE2:
+ARM GAS  /tmp/ccz85a5A.s 			page 2
+
+
+  44              		.loc 1 15 0
+  45 0008 254B     		ldr	r3, .L7
+  46 000a DA69     		ldr	r2, [r3, #28]
+  47 000c 42F00202 		orr	r2, r2, #2
+  48 0010 DA61     		str	r2, [r3, #28]
+  49 0012 DB69     		ldr	r3, [r3, #28]
+  50 0014 03F00203 		and	r3, r3, #2
+  51 0018 0193     		str	r3, [sp, #4]
+  52 001a 019B     		ldr	r3, [sp, #4]
+  53              	.LBE2:
   16:./Src/pid.c   ****   Tim3PID.Instance = TIM3;
-  56              		.loc 1 16 0
-  57 001c 204C     		ldr	r4, .L5+4
-  58 001e 214B     		ldr	r3, .L5+8
-  59 0020 2360     		str	r3, [r4]
+  54              		.loc 1 16 0
+  55 001c 214C     		ldr	r4, .L7+4
+  56 001e 224B     		ldr	r3, .L7+8
+  57 0020 2360     		str	r3, [r4]
   17:./Src/pid.c   ****   Tim3PID.Init.Period = 64500;                
-  60              		.loc 1 17 0
-  61 0022 4FF6F433 		movw	r3, #64500
-  62 0026 E360     		str	r3, [r4, #12]
+  58              		.loc 1 17 0
+  59 0022 4FF6F433 		movw	r3, #64500
+  60 0026 E360     		str	r3, [r4, #12]
   18:./Src/pid.c   ****   Tim3PID.Init.Prescaler = 198;
-  63              		.loc 1 18 0
-  64 0028 C623     		movs	r3, #198
-  65 002a 6360     		str	r3, [r4, #4]
+  61              		.loc 1 18 0
+  62 0028 C623     		movs	r3, #198
+  63 002a 6360     		str	r3, [r4, #4]
   19:./Src/pid.c   ****   Tim3PID.Init.ClockDivision = TIM_CLOCKDIVISION_DIV4;
-  66              		.loc 1 19 0
-  67 002c 4FF40073 		mov	r3, #512
-  68 0030 2361     		str	r3, [r4, #16]
+  64              		.loc 1 19 0
+  65 002c 4FF40073 		mov	r3, #512
+  66 0030 2361     		str	r3, [r4, #16]
   20:./Src/pid.c   ****   Tim3PID.Init.CounterMode = TIM_COUNTERMODE_UP;        
-  69              		.loc 1 20 0
-  70 0032 0023     		movs	r3, #0
-  71 0034 A360     		str	r3, [r4, #8]
+  67              		.loc 1 20 0
+  68 0032 0023     		movs	r3, #0
+  69 0034 A360     		str	r3, [r4, #8]
   21:./Src/pid.c   ****   HAL_TIM_Base_Init(&Tim3PID);
-  72              		.loc 1 21 0
-  73 0036 2046     		mov	r0, r4
-  74              	.LVL1:
-  75 0038 FFF7FEFF 		bl	HAL_TIM_Base_Init
-  76              	.LVL2:
+  70              		.loc 1 21 0
+  71 0036 2046     		mov	r0, r4
+  72              	.LVL1:
+  73 0038 FFF7FEFF 		bl	HAL_TIM_Base_Init
+  74              	.LVL2:
   22:./Src/pid.c   **** 
   23:./Src/pid.c   ****   sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
-  77              		.loc 1 23 0
-  78 003c 08A9     		add	r1, sp, #32
-  79 003e 4FF48053 		mov	r3, #4096
-  80 0042 41F8103D 		str	r3, [r1, #-16]!
+  75              		.loc 1 23 0
+  76 003c 08A9     		add	r1, sp, #32
+  77 003e 4FF48053 		mov	r3, #4096
+  78 0042 41F8103D 		str	r3, [r1, #-16]!
   24:./Src/pid.c   ****   if (HAL_TIM_ConfigClockSource(&Tim3PID, &sClockSourceConfig) != HAL_OK)
-  81              		.loc 1 24 0
-  82 0046 2046     		mov	r0, r4
-  83 0048 FFF7FEFF 		bl	HAL_TIM_ConfigClockSource
-  84              	.LVL3:
-  85 004c 08B1     		cbz	r0, .L2
+  79              		.loc 1 24 0
+  80 0046 2046     		mov	r0, r4
+  81 0048 FFF7FEFF 		bl	HAL_TIM_ConfigClockSource
+  82              	.LVL3:
+  83 004c 10BB     		cbnz	r0, .L5
+  84              	.L2:
   25:./Src/pid.c   ****   {
   26:./Src/pid.c   ****     Error_Handler();
-  86              		.loc 1 26 0
-  87 004e FFF7FEFF 		bl	Error_Handler
-  88              	.LVL4:
-  89              	.L2:
-ARM GAS  /tmp/ccCKUA4O.s 			page 3
-
-
   27:./Src/pid.c   ****   }
   28:./Src/pid.c   ****   sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
-  90              		.loc 1 28 0
-  91 0052 0023     		movs	r3, #0
-  92 0054 0293     		str	r3, [sp, #8]
+  85              		.loc 1 28 0
+  86 004e 0023     		movs	r3, #0
+  87 0050 0293     		str	r3, [sp, #8]
+ARM GAS  /tmp/ccz85a5A.s 			page 3
+
+
   29:./Src/pid.c   ****   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  93              		.loc 1 29 0
-  94 0056 0393     		str	r3, [sp, #12]
+  88              		.loc 1 29 0
+  89 0052 0393     		str	r3, [sp, #12]
   30:./Src/pid.c   ****   if (HAL_TIMEx_MasterConfigSynchronization(&Tim3PID, &sMasterConfig) != HAL_OK)
-  95              		.loc 1 30 0
-  96 0058 02A9     		add	r1, sp, #8
-  97 005a 1148     		ldr	r0, .L5+4
-  98 005c FFF7FEFF 		bl	HAL_TIMEx_MasterConfigSynchronization
-  99              	.LVL5:
- 100 0060 08B1     		cbz	r0, .L3
+  90              		.loc 1 30 0
+  91 0054 02A9     		add	r1, sp, #8
+  92 0056 1348     		ldr	r0, .L7+4
+  93 0058 FFF7FEFF 		bl	HAL_TIMEx_MasterConfigSynchronization
+  94              	.LVL4:
+  95 005c E8B9     		cbnz	r0, .L6
+  96              	.L3:
   31:./Src/pid.c   ****   {
   32:./Src/pid.c   ****     Error_Handler();
- 101              		.loc 1 32 0
- 102 0062 FFF7FEFF 		bl	Error_Handler
- 103              	.LVL6:
- 104              	.L3:
   33:./Src/pid.c   ****   }
   34:./Src/pid.c   ****   HAL_TIM_Base_Start_IT(&Tim3PID);
- 105              		.loc 1 34 0
- 106 0066 0E48     		ldr	r0, .L5+4
- 107 0068 FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
- 108              	.LVL7:
+  97              		.loc 1 34 0
+  98 005e 1148     		ldr	r0, .L7+4
+  99 0060 FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
+ 100              	.LVL5:
   35:./Src/pid.c   ****   HAL_NVIC_SetPriority(TIM3_IRQn, 3, 4);
- 109              		.loc 1 35 0
- 110 006c 0422     		movs	r2, #4
- 111 006e 0321     		movs	r1, #3
- 112 0070 1D20     		movs	r0, #29
- 113 0072 FFF7FEFF 		bl	HAL_NVIC_SetPriority
- 114              	.LVL8:
+ 101              		.loc 1 35 0
+ 102 0064 0422     		movs	r2, #4
+ 103 0066 0321     		movs	r1, #3
+ 104 0068 1D20     		movs	r0, #29
+ 105 006a FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 106              	.LVL6:
   36:./Src/pid.c   ****   HAL_NVIC_EnableIRQ(TIM3_IRQn);  
- 115              		.loc 1 36 0
- 116 0076 1D20     		movs	r0, #29
- 117 0078 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
- 118              	.LVL9:
+ 107              		.loc 1 36 0
+ 108 006e 1D20     		movs	r0, #29
+ 109 0070 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
+ 110              	.LVL7:
   37:./Src/pid.c   ****  
   38:./Src/pid.c   ****   pid_L_Dati.min = min;
- 119              		.loc 1 38 0
- 120 007c 0A4B     		ldr	r3, .L5+12
- 121 007e 5E60     		str	r6, [r3, #4]
+ 111              		.loc 1 38 0
+ 112 0074 0D4B     		ldr	r3, .L7+12
+ 113 0076 5E60     		str	r6, [r3, #4]
   39:./Src/pid.c   ****   pid_L_Dati.max = max;
- 122              		.loc 1 39 0
- 123 0080 1D60     		str	r5, [r3]
+ 114              		.loc 1 39 0
+ 115 0078 1D60     		str	r5, [r3]
   40:./Src/pid.c   ****   pid_R_Dati.min = min;
- 124              		.loc 1 40 0
- 125 0082 0A4B     		ldr	r3, .L5+16
- 126 0084 5E60     		str	r6, [r3, #4]
+ 116              		.loc 1 40 0
+ 117 007a 0D4B     		ldr	r3, .L7+16
+ 118 007c 5E60     		str	r6, [r3, #4]
   41:./Src/pid.c   ****   pid_R_Dati.max = max;
- 127              		.loc 1 41 0
- 128 0086 1D60     		str	r5, [r3]
+ 119              		.loc 1 41 0
+ 120 007e 1D60     		str	r5, [r3]
   42:./Src/pid.c   **** 
   43:./Src/pid.c   ****   pid_L_.mS = HAL_GetTick();
- 129              		.loc 1 43 0
-ARM GAS  /tmp/ccCKUA4O.s 			page 4
-
-
- 130 0088 FFF7FEFF 		bl	HAL_GetTick
- 131              	.LVL10:
- 132 008c 084B     		ldr	r3, .L5+20
- 133 008e 1860     		str	r0, [r3]
+ 121              		.loc 1 43 0
+ 122 0080 FFF7FEFF 		bl	HAL_GetTick
+ 123              	.LVL8:
+ 124 0084 0B4B     		ldr	r3, .L7+20
+ 125 0086 1860     		str	r0, [r3]
   44:./Src/pid.c   ****   pid_R_.mS = HAL_GetTick();
- 134              		.loc 1 44 0
- 135 0090 FFF7FEFF 		bl	HAL_GetTick
- 136              	.LVL11:
- 137 0094 074B     		ldr	r3, .L5+24
- 138 0096 1860     		str	r0, [r3]
+ 126              		.loc 1 44 0
+ 127 0088 FFF7FEFF 		bl	HAL_GetTick
+ 128              	.LVL9:
+ARM GAS  /tmp/ccz85a5A.s 			page 4
+
+
+ 129 008c 0A4B     		ldr	r3, .L7+24
+ 130 008e 1860     		str	r0, [r3]
   45:./Src/pid.c   **** }
- 139              		.loc 1 45 0
- 140 0098 08B0     		add	sp, sp, #32
- 141              	.LCFI2:
- 142              		.cfi_def_cfa_offset 16
- 143              		@ sp needed
- 144 009a 70BD     		pop	{r4, r5, r6, pc}
+ 131              		.loc 1 45 0
+ 132 0090 08B0     		add	sp, sp, #32
+ 133              	.LCFI2:
+ 134              		.cfi_remember_state
+ 135              		.cfi_def_cfa_offset 16
+ 136              		@ sp needed
+ 137 0092 70BD     		pop	{r4, r5, r6, pc}
+ 138              	.L5:
+ 139              	.LCFI3:
+ 140              		.cfi_restore_state
+  26:./Src/pid.c   ****   }
+ 141              		.loc 1 26 0
+ 142 0094 FFF7FEFF 		bl	Error_Handler
+ 143              	.LVL10:
+ 144 0098 D9E7     		b	.L2
  145              	.L6:
- 146              		.align	2
- 147              	.L5:
- 148 009c 00100240 		.word	1073876992
- 149 00a0 00000000 		.word	Tim3PID
- 150 00a4 00040040 		.word	1073742848
- 151 00a8 00000000 		.word	pid_L_Dati
- 152 00ac 00000000 		.word	pid_R_Dati
- 153 00b0 00000000 		.word	pid_L_
- 154 00b4 00000000 		.word	pid_R_
- 155              		.cfi_endproc
- 156              	.LFE64:
- 158              		.section	.text.PID_set_L_costant,"ax",%progbits
- 159              		.align	2
- 160              		.global	PID_set_L_costant
- 161              		.thumb
- 162              		.thumb_func
- 164              	PID_set_L_costant:
- 165              	.LFB65:
+  32:./Src/pid.c   ****   }
+ 146              		.loc 1 32 0
+ 147 009a FFF7FEFF 		bl	Error_Handler
+ 148              	.LVL11:
+ 149 009e DEE7     		b	.L3
+ 150              	.L8:
+ 151              		.align	2
+ 152              	.L7:
+ 153 00a0 00100240 		.word	1073876992
+ 154 00a4 00000000 		.word	Tim3PID
+ 155 00a8 00040040 		.word	1073742848
+ 156 00ac 00000000 		.word	pid_L_Dati
+ 157 00b0 00000000 		.word	pid_R_Dati
+ 158 00b4 00000000 		.word	pid_L_
+ 159 00b8 00000000 		.word	pid_R_
+ 160              		.cfi_endproc
+ 161              	.LFE66:
+ 163              		.section	.text.PID_set_L_costant,"ax",%progbits
+ 164              		.align	1
+ 165              		.global	PID_set_L_costant
+ 166              		.syntax unified
+ 167              		.thumb
+ 168              		.thumb_func
+ 169              		.fpu softvfp
+ 171              	PID_set_L_costant:
+ 172              	.LFB67:
   46:./Src/pid.c   **** 
   47:./Src/pid.c   **** void PID_set_L_costant(float P,float I,float D){
- 166              		.loc 1 47 0
- 167              		.cfi_startproc
- 168              		@ args = 0, pretend = 0, frame = 0
- 169              		@ frame_needed = 0, uses_anonymous_args = 0
- 170              		@ link register save eliminated.
- 171              	.LVL12:
+ 173              		.loc 1 47 0
+ 174              		.cfi_startproc
+ 175              		@ args = 0, pretend = 0, frame = 0
+ 176              		@ frame_needed = 0, uses_anonymous_args = 0
+ 177              		@ link register save eliminated.
+ 178              	.LVL12:
   48:./Src/pid.c   ****   pid_L_Dati.kp = P;
- 172              		.loc 1 48 0
- 173 0000 024B     		ldr	r3, .L8
- 174 0002 1861     		str	r0, [r3, #16]	@ float
+ 179              		.loc 1 48 0
+ 180 0000 024B     		ldr	r3, .L10
+ 181 0002 1861     		str	r0, [r3, #16]	@ float
+ARM GAS  /tmp/ccz85a5A.s 			page 5
+
+
   49:./Src/pid.c   ****   pid_L_Dati.ki = I;
- 175              		.loc 1 49 0
- 176 0004 5961     		str	r1, [r3, #20]	@ float
+ 182              		.loc 1 49 0
+ 183 0004 5961     		str	r1, [r3, #20]	@ float
   50:./Src/pid.c   ****   pid_L_Dati.kd = D;
- 177              		.loc 1 50 0
- 178 0006 9A61     		str	r2, [r3, #24]	@ float
- 179 0008 7047     		bx	lr
- 180              	.L9:
- 181 000a 00BF     		.align	2
-ARM GAS  /tmp/ccCKUA4O.s 			page 5
-
-
- 182              	.L8:
- 183 000c 00000000 		.word	pid_L_Dati
- 184              		.cfi_endproc
- 185              	.LFE65:
- 187              		.section	.text.PID_set_R_costant,"ax",%progbits
- 188              		.align	2
- 189              		.global	PID_set_R_costant
- 190              		.thumb
- 191              		.thumb_func
- 193              	PID_set_R_costant:
- 194              	.LFB66:
+ 184              		.loc 1 50 0
+ 185 0006 9A61     		str	r2, [r3, #24]	@ float
   51:./Src/pid.c   **** }
+ 186              		.loc 1 51 0
+ 187 0008 7047     		bx	lr
+ 188              	.L11:
+ 189 000a 00BF     		.align	2
+ 190              	.L10:
+ 191 000c 00000000 		.word	pid_L_Dati
+ 192              		.cfi_endproc
+ 193              	.LFE67:
+ 195              		.section	.text.PID_set_R_costant,"ax",%progbits
+ 196              		.align	1
+ 197              		.global	PID_set_R_costant
+ 198              		.syntax unified
+ 199              		.thumb
+ 200              		.thumb_func
+ 201              		.fpu softvfp
+ 203              	PID_set_R_costant:
+ 204              	.LFB68:
   52:./Src/pid.c   **** void PID_set_R_costant(float P,float I,float D){
- 195              		.loc 1 52 0
- 196              		.cfi_startproc
- 197              		@ args = 0, pretend = 0, frame = 0
- 198              		@ frame_needed = 0, uses_anonymous_args = 0
- 199              		@ link register save eliminated.
- 200              	.LVL13:
+ 205              		.loc 1 52 0
+ 206              		.cfi_startproc
+ 207              		@ args = 0, pretend = 0, frame = 0
+ 208              		@ frame_needed = 0, uses_anonymous_args = 0
+ 209              		@ link register save eliminated.
+ 210              	.LVL13:
   53:./Src/pid.c   ****   pid_R_Dati.kp = P;
- 201              		.loc 1 53 0
- 202 0000 024B     		ldr	r3, .L11
- 203 0002 1861     		str	r0, [r3, #16]	@ float
+ 211              		.loc 1 53 0
+ 212 0000 024B     		ldr	r3, .L13
+ 213 0002 1861     		str	r0, [r3, #16]	@ float
   54:./Src/pid.c   ****   pid_R_Dati.ki = I;
- 204              		.loc 1 54 0
- 205 0004 5961     		str	r1, [r3, #20]	@ float
+ 214              		.loc 1 54 0
+ 215 0004 5961     		str	r1, [r3, #20]	@ float
   55:./Src/pid.c   ****   pid_R_Dati.kd = D;
- 206              		.loc 1 55 0
- 207 0006 9A61     		str	r2, [r3, #24]	@ float
- 208 0008 7047     		bx	lr
- 209              	.L12:
- 210 000a 00BF     		.align	2
- 211              	.L11:
- 212 000c 00000000 		.word	pid_R_Dati
- 213              		.cfi_endproc
- 214              	.LFE66:
- 216              		.global	__aeabi_fsub
- 217              		.global	__aeabi_fadd
- 218              		.global	__aeabi_fmul
- 219              		.global	__aeabi_fcmplt
- 220              		.global	__aeabi_fcmpgt
- 221              		.section	.text.pid_update_f,"ax",%progbits
- 222              		.align	2
- 223              		.global	pid_update_f
- 224              		.thumb
- 225              		.thumb_func
- 227              	pid_update_f:
- 228              	.LFB69:
+ 216              		.loc 1 55 0
+ 217 0006 9A61     		str	r2, [r3, #24]	@ float
   56:./Src/pid.c   **** }
+ 218              		.loc 1 56 0
+ 219 0008 7047     		bx	lr
+ 220              	.L14:
+ 221 000a 00BF     		.align	2
+ 222              	.L13:
+ 223 000c 00000000 		.word	pid_R_Dati
+ 224              		.cfi_endproc
+ 225              	.LFE68:
+ 227              		.global	__aeabi_fsub
+ 228              		.global	__aeabi_fadd
+ 229              		.global	__aeabi_fmul
+ 230              		.global	__aeabi_fcmpgt
+ 231              		.global	__aeabi_fcmplt
+ 232              		.section	.text.pid_update_f,"ax",%progbits
+ 233              		.align	1
+ARM GAS  /tmp/ccz85a5A.s 			page 6
+
+
+ 234              		.global	pid_update_f
+ 235              		.syntax unified
+ 236              		.thumb
+ 237              		.thumb_func
+ 238              		.fpu softvfp
+ 240              	pid_update_f:
+ 241              	.LFB71:
   57:./Src/pid.c   **** void PID_L_task(int32_t set_speed, int32_t speed){
   58:./Src/pid.c   ****   uint32_t m_S;
   59:./Src/pid.c   ****   
@@ -298,9 +316,6 @@ ARM GAS  /tmp/ccCKUA4O.s 			page 1
   62:./Src/pid.c   ****     pid_L_.mS = HAL_GetTick(); 
   63:./Src/pid.c   ****     
   64:./Src/pid.c   ****      //Calculate the new duty cycle
-ARM GAS  /tmp/ccCKUA4O.s 			page 6
-
-
   65:./Src/pid.c   ****     pid_L_.duty = pid_update_I32(set_speed, speed, &pid_L_Dati);
   66:./Src/pid.c   ****     
   67:./Src/pid.c   ****   }  
@@ -340,507 +355,543 @@ ARM GAS  /tmp/ccCKUA4O.s 			page 1
  101:./Src/pid.c   **** float pid_update_f(float sp /*! The set point */,
  102:./Src/pid.c   ****     float pv /*! The process variable */,
  103:./Src/pid.c   ****     struct pid_f_t * ptr /*! A pointer to the PID constants */){
- 229              		.loc 1 103 0
- 230              		.cfi_startproc
- 231              		@ args = 0, pretend = 0, frame = 0
- 232              		@ frame_needed = 0, uses_anonymous_args = 0
- 233              	.LVL14:
- 234 0000 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
- 235              	.LCFI3:
- 236              		.cfi_def_cfa_offset 32
- 237              		.cfi_offset 3, -32
- 238              		.cfi_offset 4, -28
- 239              		.cfi_offset 5, -24
- 240              		.cfi_offset 6, -20
- 241              		.cfi_offset 7, -16
- 242              		.cfi_offset 8, -12
- 243              		.cfi_offset 9, -8
- 244              		.cfi_offset 14, -4
- 245 0004 1446     		mov	r4, r2
+ 242              		.loc 1 103 0
+ 243              		.cfi_startproc
+ 244              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/ccz85a5A.s 			page 7
+
+
+ 245              		@ frame_needed = 0, uses_anonymous_args = 0
+ 246              	.LVL14:
+ 247 0000 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
+ 248              	.LCFI4:
+ 249              		.cfi_def_cfa_offset 32
+ 250              		.cfi_offset 3, -32
+ 251              		.cfi_offset 4, -28
+ 252              		.cfi_offset 5, -24
+ 253              		.cfi_offset 6, -20
+ 254              		.cfi_offset 7, -16
+ 255              		.cfi_offset 8, -12
+ 256              		.cfi_offset 9, -8
+ 257              		.cfi_offset 14, -4
+ 258 0004 1446     		mov	r4, r2
  104:./Src/pid.c   ****       
-ARM GAS  /tmp/ccCKUA4O.s 			page 7
-
-
  105:./Src/pid.c   ****   float e;
  106:./Src/pid.c   ****   float manp;
  107:./Src/pid.c   ****   float tmpi;
  108:./Src/pid.c   ****   
  109:./Src/pid.c   ****   //errore
  110:./Src/pid.c   ****   e = ptr->e;
- 246              		.loc 1 110 0
- 247 0006 D2F80890 		ldr	r9, [r2, #8]	@ float
- 248              	.LVL15:
+ 259              		.loc 1 110 0
+ 260 0006 D2F80890 		ldr	r9, [r2, #8]	@ float
+ 261              	.LVL15:
  111:./Src/pid.c   ****   ptr->e = sp - pv;
- 249              		.loc 1 111 0
- 250 000a FFF7FEFF 		bl	__aeabi_fsub
- 251              	.LVL16:
- 252 000e 0546     		mov	r5, r0
- 253 0010 A060     		str	r0, [r4, #8]	@ float
+ 262              		.loc 1 111 0
+ 263 000a FFF7FEFF 		bl	__aeabi_fsub
+ 264              	.LVL16:
+ 265 000e 0546     		mov	r5, r0
+ 266 0010 A060     		str	r0, [r4, #8]	@ float
  112:./Src/pid.c   ****   
  113:./Src/pid.c   ****   //integral
  114:./Src/pid.c   ****   tmpi = ptr->i + ptr->e;
- 254              		.loc 1 114 0
- 255 0012 E168     		ldr	r1, [r4, #12]	@ float
- 256 0014 FFF7FEFF 		bl	__aeabi_fadd
- 257              	.LVL17:
- 258 0018 0746     		mov	r7, r0
- 259              	.LVL18:
+ 267              		.loc 1 114 0
+ 268 0012 E168     		ldr	r1, [r4, #12]	@ float
+ 269 0014 FFF7FEFF 		bl	__aeabi_fadd
+ 270              	.LVL17:
+ 271 0018 0746     		mov	r7, r0
+ 272              	.LVL18:
  115:./Src/pid.c   ****   
  116:./Src/pid.c   ****   //P*I*D
  117:./Src/pid.c   ****   manp = ptr->kp * ptr->e + ptr->ki * tmpi + ptr->kd * (e - ptr->e);
- 260              		.loc 1 117 0
- 261 001a 2169     		ldr	r1, [r4, #16]	@ float
- 262 001c 2846     		mov	r0, r5
- 263              	.LVL19:
- 264 001e FFF7FEFF 		bl	__aeabi_fmul
- 265              	.LVL20:
- 266 0022 0646     		mov	r6, r0
- 267 0024 6169     		ldr	r1, [r4, #20]	@ float
- 268 0026 3846     		mov	r0, r7
- 269 0028 FFF7FEFF 		bl	__aeabi_fmul
- 270              	.LVL21:
- 271 002c 0146     		mov	r1, r0
- 272 002e 3046     		mov	r0, r6
- 273 0030 FFF7FEFF 		bl	__aeabi_fadd
- 274              	.LVL22:
- 275 0034 0646     		mov	r6, r0
- 276 0036 D4F81880 		ldr	r8, [r4, #24]	@ float
- 277 003a 2946     		mov	r1, r5
- 278 003c 4846     		mov	r0, r9
- 279 003e FFF7FEFF 		bl	__aeabi_fsub
- 280              	.LVL23:
- 281 0042 0146     		mov	r1, r0
- 282 0044 4046     		mov	r0, r8
- 283 0046 FFF7FEFF 		bl	__aeabi_fmul
- 284              	.LVL24:
- 285 004a 0146     		mov	r1, r0
- 286 004c 3046     		mov	r0, r6
- 287 004e FFF7FEFF 		bl	__aeabi_fadd
- 288              	.LVL25:
- 289 0052 0646     		mov	r6, r0
-ARM GAS  /tmp/ccCKUA4O.s 			page 8
+ 273              		.loc 1 117 0
+ 274 001a 2169     		ldr	r1, [r4, #16]	@ float
+ 275 001c 2846     		mov	r0, r5
+ 276              	.LVL19:
+ 277 001e FFF7FEFF 		bl	__aeabi_fmul
+ 278              	.LVL20:
+ 279 0022 0646     		mov	r6, r0
+ 280 0024 3946     		mov	r1, r7
+ 281 0026 6069     		ldr	r0, [r4, #20]	@ float
+ 282 0028 FFF7FEFF 		bl	__aeabi_fmul
+ 283              	.LVL21:
+ 284 002c 0146     		mov	r1, r0
+ 285 002e 3046     		mov	r0, r6
+ 286 0030 FFF7FEFF 		bl	__aeabi_fadd
+ 287              	.LVL22:
+ARM GAS  /tmp/ccz85a5A.s 			page 8
 
 
- 290              	.LVL26:
+ 288 0034 0646     		mov	r6, r0
+ 289 0036 D4F81880 		ldr	r8, [r4, #24]	@ float
+ 290 003a 2946     		mov	r1, r5
+ 291 003c 4846     		mov	r0, r9
+ 292 003e FFF7FEFF 		bl	__aeabi_fsub
+ 293              	.LVL23:
+ 294 0042 0146     		mov	r1, r0
+ 295 0044 4046     		mov	r0, r8
+ 296 0046 FFF7FEFF 		bl	__aeabi_fmul
+ 297              	.LVL24:
+ 298 004a 0146     		mov	r1, r0
+ 299 004c 3046     		mov	r0, r6
+ 300 004e FFF7FEFF 		bl	__aeabi_fadd
+ 301              	.LVL25:
+ 302 0052 0646     		mov	r6, r0
+ 303              	.LVL26:
  118:./Src/pid.c   ****   
  119:./Src/pid.c   ****   //Limit, max;min
  120:./Src/pid.c   ****   if( (manp < ptr->max) && (manp > ptr->min) ){
- 291              		.loc 1 120 0
- 292 0054 2568     		ldr	r5, [r4]	@ float
- 293 0056 2946     		mov	r1, r5
- 294 0058 FFF7FEFF 		bl	__aeabi_fcmplt
- 295              	.LVL27:
- 296 005c 38B1     		cbz	r0, .L14
- 297              		.loc 1 120 0 is_stmt 0 discriminator 1
- 298 005e 6168     		ldr	r1, [r4, #4]	@ float
- 299 0060 3046     		mov	r0, r6
- 300 0062 FFF7FEFF 		bl	__aeabi_fcmpgt
- 301              	.LVL28:
- 302 0066 10B1     		cbz	r0, .L14
+ 304              		.loc 1 120 0
+ 305 0054 2568     		ldr	r5, [r4]	@ float
+ 306 0056 0146     		mov	r1, r0
+ 307 0058 2846     		mov	r0, r5
+ 308              	.LVL27:
+ 309 005a FFF7FEFF 		bl	__aeabi_fcmpgt
+ 310              	.LVL28:
+ 311 005e 20B1     		cbz	r0, .L16
+ 312              		.loc 1 120 0 is_stmt 0 discriminator 1
+ 313 0060 3146     		mov	r1, r6
+ 314 0062 6068     		ldr	r0, [r4, #4]	@ float
+ 315 0064 FFF7FEFF 		bl	__aeabi_fcmplt
+ 316              	.LVL29:
+ 317 0068 60B9     		cbnz	r0, .L23
+ 318              	.L16:
  121:./Src/pid.c   ****     ptr->i = tmpi;
- 303              		.loc 1 121 0 is_stmt 1
- 304 0068 E760     		str	r7, [r4, #12]	@ float
- 117:./Src/pid.c   ****   
- 305              		.loc 1 117 0
- 306 006a 3546     		mov	r5, r6
- 307              		.loc 1 121 0
- 308 006c 0BE0     		b	.L17
- 309              	.L14:
  122:./Src/pid.c   ****   } else if ( manp > ptr->max ){
- 310              		.loc 1 122 0
- 311 006e 2946     		mov	r1, r5
- 312 0070 3046     		mov	r0, r6
- 313 0072 FFF7FEFF 		bl	__aeabi_fcmpgt
- 314              	.LVL29:
- 315 0076 30B9     		cbnz	r0, .L17
+ 319              		.loc 1 122 0 is_stmt 1
+ 320 006a 3146     		mov	r1, r6
+ 321 006c 2846     		mov	r0, r5
+ 322 006e FFF7FEFF 		bl	__aeabi_fcmplt
+ 323              	.LVL30:
+ 324 0072 48B9     		cbnz	r0, .L15
  123:./Src/pid.c   ****     manp = ptr->max;
  124:./Src/pid.c   ****   } else if ( manp < ptr->min ){
- 316              		.loc 1 124 0
- 317 0078 6568     		ldr	r5, [r4, #4]	@ float
- 318 007a 2946     		mov	r1, r5
- 319 007c 3046     		mov	r0, r6
- 320 007e FFF7FEFF 		bl	__aeabi_fcmplt
- 321              	.LVL30:
- 322 0082 00B9     		cbnz	r0, .L17
+ 325              		.loc 1 124 0
+ 326 0074 6568     		ldr	r5, [r4, #4]	@ float
+ 327 0076 3146     		mov	r1, r6
+ 328 0078 2846     		mov	r0, r5
+ 329 007a FFF7FEFF 		bl	__aeabi_fcmpgt
+ 330              	.LVL31:
+ 331 007e 18B9     		cbnz	r0, .L15
  117:./Src/pid.c   ****   
- 323              		.loc 1 117 0
- 324 0084 3546     		mov	r5, r6
- 325              	.L17:
- 326              	.LVL31:
+ 332              		.loc 1 117 0
+ 333 0080 3546     		mov	r5, r6
+ 334              	.LVL32:
  125:./Src/pid.c   ****     manp = ptr->min;
  126:./Src/pid.c   ****   }
+ARM GAS  /tmp/ccz85a5A.s 			page 9
+
+
  127:./Src/pid.c   ****   return manp;
+ 335              		.loc 1 127 0
+ 336 0082 01E0     		b	.L15
+ 337              	.LVL33:
+ 338              	.L23:
+ 121:./Src/pid.c   ****   } else if ( manp > ptr->max ){
+ 339              		.loc 1 121 0
+ 340 0084 E760     		str	r7, [r4, #12]	@ float
+ 117:./Src/pid.c   ****   
+ 341              		.loc 1 117 0
+ 342 0086 3546     		mov	r5, r6
+ 343              	.LVL34:
+ 344              	.L15:
  128:./Src/pid.c   **** }
- 327              		.loc 1 128 0
- 328 0086 2846     		mov	r0, r5
- 329 0088 BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
- 330              		.cfi_endproc
- 331              	.LFE69:
- 333              		.global	__aeabi_i2f
- 334              		.global	__aeabi_f2iz
-ARM GAS  /tmp/ccCKUA4O.s 			page 9
-
-
- 335              		.section	.text.pid_update_I32,"ax",%progbits
- 336              		.align	2
- 337              		.global	pid_update_I32
- 338              		.thumb
- 339              		.thumb_func
- 341              	pid_update_I32:
- 342              	.LFB70:
+ 345              		.loc 1 128 0
+ 346 0088 2846     		mov	r0, r5
+ 347 008a BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 348              		.cfi_endproc
+ 349              	.LFE71:
+ 351              		.global	__aeabi_i2f
+ 352              		.global	__aeabi_f2iz
+ 353              		.section	.text.pid_update_I32,"ax",%progbits
+ 354              		.align	1
+ 355              		.global	pid_update_I32
+ 356              		.syntax unified
+ 357              		.thumb
+ 358              		.thumb_func
+ 359              		.fpu softvfp
+ 361              	pid_update_I32:
+ 362              	.LFB72:
  129:./Src/pid.c   **** 
  130:./Src/pid.c   **** int32_t pid_update_I32(int32_t sp /*! The set point */,
  131:./Src/pid.c   ****     int32_t pv /*! The process variable */,
  132:./Src/pid.c   ****     struct pid_I32_t * ptr /*! A pointer to the PID constants */){
- 343              		.loc 1 132 0
- 344              		.cfi_startproc
- 345              		@ args = 0, pretend = 0, frame = 0
- 346              		@ frame_needed = 0, uses_anonymous_args = 0
- 347              	.LVL32:
- 348 0000 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
- 349              	.LCFI4:
- 350              		.cfi_def_cfa_offset 32
- 351              		.cfi_offset 3, -32
- 352              		.cfi_offset 4, -28
- 353              		.cfi_offset 5, -24
- 354              		.cfi_offset 6, -20
- 355              		.cfi_offset 7, -16
- 356              		.cfi_offset 8, -12
- 357              		.cfi_offset 9, -8
- 358              		.cfi_offset 14, -4
- 359 0004 1446     		mov	r4, r2
+ 363              		.loc 1 132 0
+ 364              		.cfi_startproc
+ 365              		@ args = 0, pretend = 0, frame = 0
+ 366              		@ frame_needed = 0, uses_anonymous_args = 0
+ 367              	.LVL35:
+ 368 0000 2DE9F843 		push	{r3, r4, r5, r6, r7, r8, r9, lr}
+ 369              	.LCFI5:
+ 370              		.cfi_def_cfa_offset 32
+ 371              		.cfi_offset 3, -32
+ 372              		.cfi_offset 4, -28
+ 373              		.cfi_offset 5, -24
+ 374              		.cfi_offset 6, -20
+ 375              		.cfi_offset 7, -16
+ 376              		.cfi_offset 8, -12
+ 377              		.cfi_offset 9, -8
+ 378              		.cfi_offset 14, -4
+ 379 0004 1446     		mov	r4, r2
  133:./Src/pid.c   ****       
  134:./Src/pid.c   ****   int32_t e;
  135:./Src/pid.c   ****   float manp;
  136:./Src/pid.c   ****   int32_t tmpi;
  137:./Src/pid.c   ****   int32_t manpI32;
  138:./Src/pid.c   ****   
+ARM GAS  /tmp/ccz85a5A.s 			page 10
+
+
  139:./Src/pid.c   ****   //errore
  140:./Src/pid.c   ****   e = ptr->e;
- 360              		.loc 1 140 0
- 361 0006 D2F80890 		ldr	r9, [r2, #8]
- 362              	.LVL33:
+ 380              		.loc 1 140 0
+ 381 0006 D2F80890 		ldr	r9, [r2, #8]
+ 382              	.LVL36:
  141:./Src/pid.c   ****   ptr->e = sp - pv;
- 363              		.loc 1 141 0
- 364 000a 451A     		subs	r5, r0, r1
- 365 000c 9560     		str	r5, [r2, #8]
+ 383              		.loc 1 141 0
+ 384 000a 451A     		subs	r5, r0, r1
+ 385 000c 9560     		str	r5, [r2, #8]
  142:./Src/pid.c   ****   
  143:./Src/pid.c   ****   //integral
  144:./Src/pid.c   ****   tmpi = ptr->i + ptr->e;
- 366              		.loc 1 144 0
- 367 000e D368     		ldr	r3, [r2, #12]
- 368 0010 EE18     		adds	r6, r5, r3
- 369              	.LVL34:
+ 386              		.loc 1 144 0
+ 387 000e D368     		ldr	r3, [r2, #12]
+ 388 0010 EE18     		adds	r6, r5, r3
+ 389              	.LVL37:
  145:./Src/pid.c   ****   if(ptr->i > 300){
- 370              		.loc 1 145 0
- 371 0012 B3F5967F 		cmp	r3, #300
- 372 0016 02DD     		ble	.L22
+ 390              		.loc 1 145 0
+ 391 0012 B3F5967F 		cmp	r3, #300
+ 392 0016 02DD     		ble	.L25
  146:./Src/pid.c   ****     ptr->i = 300;
- 373              		.loc 1 146 0
- 374 0018 4FF49673 		mov	r3, #300
-ARM GAS  /tmp/ccCKUA4O.s 			page 10
-
-
- 375 001c D360     		str	r3, [r2, #12]
- 376              	.L22:
+ 393              		.loc 1 146 0
+ 394 0018 4FF49673 		mov	r3, #300
+ 395 001c D360     		str	r3, [r2, #12]
+ 396              	.L25:
  147:./Src/pid.c   ****   }
  148:./Src/pid.c   ****   if(ptr->i < -300){
- 377              		.loc 1 148 0
- 378 001e E368     		ldr	r3, [r4, #12]
- 379 0020 13F5967F 		cmn	r3, #300
- 380 0024 01DA     		bge	.L23
+ 397              		.loc 1 148 0
+ 398 001e E368     		ldr	r3, [r4, #12]
+ 399 0020 13F5967F 		cmn	r3, #300
+ 400 0024 01DA     		bge	.L26
  149:./Src/pid.c   ****     ptr->i = -300;
- 381              		.loc 1 149 0
- 382 0026 1C4B     		ldr	r3, .L27
- 383 0028 E360     		str	r3, [r4, #12]
- 384              	.L23:
+ 401              		.loc 1 149 0
+ 402 0026 1C4B     		ldr	r3, .L31
+ 403 0028 E360     		str	r3, [r4, #12]
+ 404              	.L26:
  150:./Src/pid.c   ****   }
  151:./Src/pid.c   ****   
  152:./Src/pid.c   ****   //P*I*D
  153:./Src/pid.c   ****   manp = (ptr->kp * ptr->e) + (ptr->ki * tmpi) + (ptr->kd * (e - ptr->e));
- 385              		.loc 1 153 0
- 386 002a 2769     		ldr	r7, [r4, #16]	@ float
- 387 002c 2846     		mov	r0, r5
- 388              	.LVL35:
- 389 002e FFF7FEFF 		bl	__aeabi_i2f
- 390              	.LVL36:
- 391 0032 3946     		mov	r1, r7
- 392 0034 FFF7FEFF 		bl	__aeabi_fmul
- 393              	.LVL37:
- 394 0038 0746     		mov	r7, r0
- 395 003a D4F81480 		ldr	r8, [r4, #20]	@ float
- 396 003e 3046     		mov	r0, r6
- 397 0040 FFF7FEFF 		bl	__aeabi_i2f
- 398              	.LVL38:
- 399 0044 4146     		mov	r1, r8
- 400 0046 FFF7FEFF 		bl	__aeabi_fmul
- 401              	.LVL39:
- 402 004a 0146     		mov	r1, r0
- 403 004c 3846     		mov	r0, r7
- 404 004e FFF7FEFF 		bl	__aeabi_fadd
- 405              	.LVL40:
- 406 0052 0746     		mov	r7, r0
- 407 0054 D4F81880 		ldr	r8, [r4, #24]	@ float
- 408 0058 C5EB0900 		rsb	r0, r5, r9
- 409 005c FFF7FEFF 		bl	__aeabi_i2f
- 410              	.LVL41:
- 411 0060 4146     		mov	r1, r8
- 412 0062 FFF7FEFF 		bl	__aeabi_fmul
- 413              	.LVL42:
- 414 0066 0146     		mov	r1, r0
- 415 0068 3846     		mov	r0, r7
- 416 006a FFF7FEFF 		bl	__aeabi_fadd
- 417              	.LVL43:
+ 405              		.loc 1 153 0
+ 406 002a 2769     		ldr	r7, [r4, #16]	@ float
+ 407 002c 2846     		mov	r0, r5
+ 408              	.LVL38:
+ 409 002e FFF7FEFF 		bl	__aeabi_i2f
+ 410              	.LVL39:
+ 411 0032 3946     		mov	r1, r7
+ 412 0034 FFF7FEFF 		bl	__aeabi_fmul
+ 413              	.LVL40:
+ 414 0038 0746     		mov	r7, r0
+ 415 003a D4F81480 		ldr	r8, [r4, #20]	@ float
+ 416 003e 3046     		mov	r0, r6
+ 417 0040 FFF7FEFF 		bl	__aeabi_i2f
+ 418              	.LVL41:
+ 419 0044 4146     		mov	r1, r8
+ 420 0046 FFF7FEFF 		bl	__aeabi_fmul
+ 421              	.LVL42:
+ARM GAS  /tmp/ccz85a5A.s 			page 11
+
+
+ 422 004a 0146     		mov	r1, r0
+ 423 004c 3846     		mov	r0, r7
+ 424 004e FFF7FEFF 		bl	__aeabi_fadd
+ 425              	.LVL43:
+ 426 0052 0746     		mov	r7, r0
+ 427 0054 D4F81880 		ldr	r8, [r4, #24]	@ float
+ 428 0058 A9EB0500 		sub	r0, r9, r5
+ 429 005c FFF7FEFF 		bl	__aeabi_i2f
+ 430              	.LVL44:
+ 431 0060 4146     		mov	r1, r8
+ 432 0062 FFF7FEFF 		bl	__aeabi_fmul
+ 433              	.LVL45:
+ 434 0066 0146     		mov	r1, r0
+ 435 0068 3846     		mov	r0, r7
+ 436 006a FFF7FEFF 		bl	__aeabi_fadd
+ 437              	.LVL46:
  154:./Src/pid.c   ****   manpI32 = (int32_t)manp;
- 418              		.loc 1 154 0
- 419 006e FFF7FEFF 		bl	__aeabi_f2iz
- 420              	.LVL44:
+ 438              		.loc 1 154 0
+ 439 006e FFF7FEFF 		bl	__aeabi_f2iz
+ 440              	.LVL47:
  155:./Src/pid.c   ****   
  156:./Src/pid.c   ****   //Limit, max;min
  157:./Src/pid.c   ****   if( (manpI32 < ptr->max) && (manpI32 > ptr->min) ){
-ARM GAS  /tmp/ccCKUA4O.s 			page 11
-
-
- 421              		.loc 1 157 0
- 422 0072 2368     		ldr	r3, [r4]
- 423 0074 9842     		cmp	r0, r3
- 424 0076 05DA     		bge	.L24
- 425              		.loc 1 157 0 is_stmt 0 discriminator 1
- 426 0078 6268     		ldr	r2, [r4, #4]
- 427 007a 9042     		cmp	r0, r2
- 428 007c 02DD     		ble	.L24
+ 441              		.loc 1 157 0
+ 442 0072 2368     		ldr	r3, [r4]
+ 443 0074 8342     		cmp	r3, r0
+ 444 0076 02DD     		ble	.L27
+ 445              		.loc 1 157 0 is_stmt 0 discriminator 1
+ 446 0078 6268     		ldr	r2, [r4, #4]
+ 447 007a 8242     		cmp	r2, r0
+ 448 007c 06DB     		blt	.L30
+ 449              	.L27:
  158:./Src/pid.c   ****     ptr->i = tmpi;
- 429              		.loc 1 158 0 is_stmt 1
- 430 007e E660     		str	r6, [r4, #12]
- 154:./Src/pid.c   ****   manpI32 = (int32_t)manp;
- 431              		.loc 1 154 0
- 432 0080 0346     		mov	r3, r0
- 433              		.loc 1 158 0
- 434 0082 05E0     		b	.L25
- 435              	.L24:
  159:./Src/pid.c   ****   } else if ( manpI32 > ptr->max ){
- 436              		.loc 1 159 0
- 437 0084 9842     		cmp	r0, r3
- 438 0086 03DC     		bgt	.L25
+ 450              		.loc 1 159 0 is_stmt 1
+ 451 007e 8342     		cmp	r3, r0
+ 452 0080 06DB     		blt	.L24
  160:./Src/pid.c   ****     manpI32 = ptr->max;
  161:./Src/pid.c   ****   } else if ( manpI32 < ptr->min ){
- 439              		.loc 1 161 0
- 440 0088 6368     		ldr	r3, [r4, #4]
- 441 008a 9842     		cmp	r0, r3
- 442 008c 00DB     		blt	.L25
+ 453              		.loc 1 161 0
+ 454 0082 6368     		ldr	r3, [r4, #4]
+ 455 0084 8342     		cmp	r3, r0
+ 456 0086 03DC     		bgt	.L24
  154:./Src/pid.c   ****   
- 443              		.loc 1 154 0
- 444 008e 0346     		mov	r3, r0
- 445              	.L25:
- 446              	.LVL45:
+ 457              		.loc 1 154 0
+ 458 0088 0346     		mov	r3, r0
+ 459              	.LVL48:
  162:./Src/pid.c   ****     manpI32 = ptr->min;
  163:./Src/pid.c   ****   }
  164:./Src/pid.c   ****   return manpI32;
+ 460              		.loc 1 164 0
+ 461 008a 01E0     		b	.L24
+ 462              	.LVL49:
+ 463              	.L30:
+ 158:./Src/pid.c   ****   } else if ( manpI32 > ptr->max ){
+ 464              		.loc 1 158 0
+ 465 008c E660     		str	r6, [r4, #12]
+ARM GAS  /tmp/ccz85a5A.s 			page 12
+
+
+ 154:./Src/pid.c   ****   
+ 466              		.loc 1 154 0
+ 467 008e 0346     		mov	r3, r0
+ 468              	.LVL50:
+ 469              	.L24:
  165:./Src/pid.c   **** }
- 447              		.loc 1 165 0
- 448 0090 1846     		mov	r0, r3
- 449 0092 BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
- 450              	.LVL46:
- 451              	.L28:
- 452 0096 00BF     		.align	2
- 453              	.L27:
- 454 0098 D4FEFFFF 		.word	-300
- 455              		.cfi_endproc
- 456              	.LFE70:
- 458              		.section	.text.PID_L_task,"ax",%progbits
- 459              		.align	2
- 460              		.global	PID_L_task
- 461              		.thumb
- 462              		.thumb_func
- 464              	PID_L_task:
- 465              	.LFB67:
+ 470              		.loc 1 165 0
+ 471 0090 1846     		mov	r0, r3
+ 472 0092 BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
+ 473              	.LVL51:
+ 474              	.L32:
+ 475 0096 00BF     		.align	2
+ 476              	.L31:
+ 477 0098 D4FEFFFF 		.word	-300
+ 478              		.cfi_endproc
+ 479              	.LFE72:
+ 481              		.section	.text.PID_L_task,"ax",%progbits
+ 482              		.align	1
+ 483              		.global	PID_L_task
+ 484              		.syntax unified
+ 485              		.thumb
+ 486              		.thumb_func
+ 487              		.fpu softvfp
+ 489              	PID_L_task:
+ 490              	.LFB69:
   57:./Src/pid.c   ****   uint32_t m_S;
- 466              		.loc 1 57 0
- 467              		.cfi_startproc
- 468              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccCKUA4O.s 			page 12
-
-
- 469              		@ frame_needed = 0, uses_anonymous_args = 0
- 470              	.LVL47:
- 471 0000 70B5     		push	{r4, r5, r6, lr}
- 472              	.LCFI5:
- 473              		.cfi_def_cfa_offset 16
- 474              		.cfi_offset 4, -16
- 475              		.cfi_offset 5, -12
- 476              		.cfi_offset 6, -8
- 477              		.cfi_offset 14, -4
- 478 0002 0446     		mov	r4, r0
- 479 0004 0D46     		mov	r5, r1
+ 491              		.loc 1 57 0
+ 492              		.cfi_startproc
+ 493              		@ args = 0, pretend = 0, frame = 0
+ 494              		@ frame_needed = 0, uses_anonymous_args = 0
+ 495              	.LVL52:
+ 496 0000 70B5     		push	{r4, r5, r6, lr}
+ 497              	.LCFI6:
+ 498              		.cfi_def_cfa_offset 16
+ 499              		.cfi_offset 4, -16
+ 500              		.cfi_offset 5, -12
+ 501              		.cfi_offset 6, -8
+ 502              		.cfi_offset 14, -4
+ 503 0002 0446     		mov	r4, r0
+ 504 0004 0D46     		mov	r5, r1
   60:./Src/pid.c   ****   if((m_S - pid_L_.mS)>=200){
- 480              		.loc 1 60 0
- 481 0006 FFF7FEFF 		bl	HAL_GetTick
- 482              	.LVL48:
+ 505              		.loc 1 60 0
+ 506 0006 FFF7FEFF 		bl	HAL_GetTick
+ 507              	.LVL53:
   61:./Src/pid.c   ****     pid_L_.mS = HAL_GetTick(); 
- 483              		.loc 1 61 0
- 484 000a 084B     		ldr	r3, .L32
- 485 000c 1B68     		ldr	r3, [r3]
- 486 000e C01A     		subs	r0, r0, r3
- 487              	.LVL49:
- 488 0010 C728     		cmp	r0, #199
- 489 0012 09D9     		bls	.L29
+ 508              		.loc 1 61 0
+ 509 000a 084B     		ldr	r3, .L37
+ 510 000c 1B68     		ldr	r3, [r3]
+ 511 000e C01A     		subs	r0, r0, r3
+ 512              	.LVL54:
+ 513 0010 C728     		cmp	r0, #199
+ 514 0012 00D8     		bhi	.L36
+ 515              	.L33:
+  68:./Src/pid.c   **** 
+ 516              		.loc 1 68 0
+ 517 0014 70BD     		pop	{r4, r5, r6, pc}
+ 518              	.LVL55:
+ARM GAS  /tmp/ccz85a5A.s 			page 13
+
+
+ 519              	.L36:
   62:./Src/pid.c   ****     
- 490              		.loc 1 62 0
- 491 0014 FFF7FEFF 		bl	HAL_GetTick
- 492              	.LVL50:
- 493 0018 044E     		ldr	r6, .L32
- 494 001a 3060     		str	r0, [r6]
+ 520              		.loc 1 62 0
+ 521 0016 FFF7FEFF 		bl	HAL_GetTick
+ 522              	.LVL56:
+ 523 001a 044E     		ldr	r6, .L37
+ 524 001c 3060     		str	r0, [r6]
   65:./Src/pid.c   ****     
- 495              		.loc 1 65 0
- 496 001c 044A     		ldr	r2, .L32+4
- 497 001e 2946     		mov	r1, r5
- 498 0020 2046     		mov	r0, r4
- 499 0022 FFF7FEFF 		bl	pid_update_I32
- 500              	.LVL51:
- 501 0026 7060     		str	r0, [r6, #4]
- 502              	.L29:
- 503 0028 70BD     		pop	{r4, r5, r6, pc}
- 504              	.LVL52:
- 505              	.L33:
- 506 002a 00BF     		.align	2
- 507              	.L32:
- 508 002c 00000000 		.word	pid_L_
- 509 0030 00000000 		.word	pid_L_Dati
- 510              		.cfi_endproc
- 511              	.LFE67:
- 513              		.section	.text.PID_R_task,"ax",%progbits
- 514              		.align	2
- 515              		.global	PID_R_task
- 516              		.thumb
- 517              		.thumb_func
- 519              	PID_R_task:
- 520              	.LFB68:
+ 525              		.loc 1 65 0
+ 526 001e 044A     		ldr	r2, .L37+4
+ 527 0020 2946     		mov	r1, r5
+ 528 0022 2046     		mov	r0, r4
+ 529 0024 FFF7FEFF 		bl	pid_update_I32
+ 530              	.LVL57:
+ 531 0028 7060     		str	r0, [r6, #4]
+  68:./Src/pid.c   **** 
+ 532              		.loc 1 68 0
+ 533 002a F3E7     		b	.L33
+ 534              	.L38:
+ 535              		.align	2
+ 536              	.L37:
+ 537 002c 00000000 		.word	pid_L_
+ 538 0030 00000000 		.word	pid_L_Dati
+ 539              		.cfi_endproc
+ 540              	.LFE69:
+ 542              		.section	.text.PID_R_task,"ax",%progbits
+ 543              		.align	1
+ 544              		.global	PID_R_task
+ 545              		.syntax unified
+ 546              		.thumb
+ 547              		.thumb_func
+ 548              		.fpu softvfp
+ 550              	PID_R_task:
+ 551              	.LFB70:
   71:./Src/pid.c   ****   uint32_t m_S;
- 521              		.loc 1 71 0
- 522              		.cfi_startproc
-ARM GAS  /tmp/ccCKUA4O.s 			page 13
-
-
- 523              		@ args = 0, pretend = 0, frame = 0
- 524              		@ frame_needed = 0, uses_anonymous_args = 0
- 525              	.LVL53:
- 526 0000 70B5     		push	{r4, r5, r6, lr}
- 527              	.LCFI6:
- 528              		.cfi_def_cfa_offset 16
- 529              		.cfi_offset 4, -16
- 530              		.cfi_offset 5, -12
- 531              		.cfi_offset 6, -8
- 532              		.cfi_offset 14, -4
- 533 0002 0446     		mov	r4, r0
+ 552              		.loc 1 71 0
+ 553              		.cfi_startproc
+ 554              		@ args = 0, pretend = 0, frame = 0
+ 555              		@ frame_needed = 0, uses_anonymous_args = 0
+ 556              	.LVL58:
+ 557 0000 70B5     		push	{r4, r5, r6, lr}
+ 558              	.LCFI7:
+ 559              		.cfi_def_cfa_offset 16
+ 560              		.cfi_offset 4, -16
+ 561              		.cfi_offset 5, -12
+ 562              		.cfi_offset 6, -8
+ 563              		.cfi_offset 14, -4
+ 564 0002 0446     		mov	r4, r0
   74:./Src/pid.c   ****   if((m_S - pid_R_.mS)>=200){
- 534              		.loc 1 74 0
- 535 0004 FFF7FEFF 		bl	HAL_GetTick
- 536              	.LVL54:
+ 565              		.loc 1 74 0
+ 566 0004 FFF7FEFF 		bl	HAL_GetTick
+ 567              	.LVL59:
   75:./Src/pid.c   ****     pid_R_.mS = HAL_GetTick(); 
- 537              		.loc 1 75 0
- 538 0008 094B     		ldr	r3, .L37
- 539 000a 1B68     		ldr	r3, [r3]
- 540 000c C01A     		subs	r0, r0, r3
- 541              	.LVL55:
- 542 000e C728     		cmp	r0, #199
- 543 0010 0CD9     		bls	.L34
+ 568              		.loc 1 75 0
+ 569 0008 094B     		ldr	r3, .L43
+ 570 000a 1B68     		ldr	r3, [r3]
+ 571 000c C01A     		subs	r0, r0, r3
+ARM GAS  /tmp/ccz85a5A.s 			page 14
+
+
+ 572              	.LVL60:
+ 573 000e C728     		cmp	r0, #199
+ 574 0010 00D8     		bhi	.L42
+ 575              	.L39:
+  83:./Src/pid.c   **** 
+ 576              		.loc 1 83 0
+ 577 0012 70BD     		pop	{r4, r5, r6, pc}
+ 578              	.LVL61:
+ 579              	.L42:
   76:./Src/pid.c   ****     
- 544              		.loc 1 76 0
- 545 0012 FFF7FEFF 		bl	HAL_GetTick
- 546              	.LVL56:
- 547 0016 064E     		ldr	r6, .L37
- 548 0018 3060     		str	r0, [r6]
+ 580              		.loc 1 76 0
+ 581 0014 FFF7FEFF 		bl	HAL_GetTick
+ 582              	.LVL62:
+ 583 0018 054E     		ldr	r6, .L43
+ 584 001a 3060     		str	r0, [r6]
   79:./Src/pid.c   ****     testVelR = 0;
- 549              		.loc 1 79 0
- 550 001a 064D     		ldr	r5, .L37+4
- 551 001c 2968     		ldr	r1, [r5]
- 552 001e 064A     		ldr	r2, .L37+8
- 553 0020 2046     		mov	r0, r4
- 554 0022 FFF7FEFF 		bl	pid_update_I32
- 555              	.LVL57:
- 556 0026 7060     		str	r0, [r6, #4]
+ 585              		.loc 1 79 0
+ 586 001c 054D     		ldr	r5, .L43+4
+ 587 001e 2968     		ldr	r1, [r5]
+ 588 0020 054A     		ldr	r2, .L43+8
+ 589 0022 2046     		mov	r0, r4
+ 590 0024 FFF7FEFF 		bl	pid_update_I32
+ 591              	.LVL63:
+ 592 0028 7060     		str	r0, [r6, #4]
   80:./Src/pid.c   ****     
- 557              		.loc 1 80 0
- 558 0028 0023     		movs	r3, #0
- 559 002a 2B60     		str	r3, [r5]
- 560              	.L34:
- 561 002c 70BD     		pop	{r4, r5, r6, pc}
- 562              	.LVL58:
- 563              	.L38:
- 564 002e 00BF     		.align	2
- 565              	.L37:
- 566 0030 00000000 		.word	pid_R_
- 567 0034 00000000 		.word	testVelR
- 568 0038 00000000 		.word	pid_R_Dati
- 569              		.cfi_endproc
- 570              	.LFE68:
- 572              		.comm	pid_R_Dati,28,4
- 573              		.comm	pid_L_Dati,28,4
- 574              		.comm	pid_R_,8,4
- 575              		.comm	pid_L_,8,4
-ARM GAS  /tmp/ccCKUA4O.s 			page 14
+ 593              		.loc 1 80 0
+ 594 002a 0023     		movs	r3, #0
+ 595 002c 2B60     		str	r3, [r5]
+  83:./Src/pid.c   **** 
+ 596              		.loc 1 83 0
+ 597 002e F0E7     		b	.L39
+ 598              	.L44:
+ 599              		.align	2
+ 600              	.L43:
+ 601 0030 00000000 		.word	pid_R_
+ 602 0034 00000000 		.word	testVelR
+ 603 0038 00000000 		.word	pid_R_Dati
+ 604              		.cfi_endproc
+ 605              	.LFE70:
+ 607              		.comm	pid_R_Dati,28,4
+ 608              		.comm	pid_L_Dati,28,4
+ 609              		.comm	pid_R_,8,4
+ 610              		.comm	pid_L_,8,4
+ 611              		.comm	Tim3PID,60,4
+ 612              		.text
+ 613              	.Letext0:
+ 614              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 615              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 616              		.file 4 "./Drivers/CMSIS/Include/core_cm3.h"
+ 617              		.file 5 "./Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 618              		.file 6 "./Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
+ 619              		.file 7 "/usr/arm-none-eabi/include/sys/lock.h"
+ 620              		.file 8 "/usr/arm-none-eabi/include/sys/_types.h"
+ 621              		.file 9 "/usr/lib/gcc/arm-none-eabi/7.2.0/include/stddef.h"
+ 622              		.file 10 "/usr/arm-none-eabi/include/sys/reent.h"
+ 623              		.file 11 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 624              		.file 12 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ARM GAS  /tmp/ccz85a5A.s 			page 15
 
 
- 576              		.comm	Tim3PID,60,4
- 577              		.text
- 578              	.Letext0:
- 579              		.file 2 "/home/niklas/gcc-arm-none-eabi-5_4-2016q3/arm-none-eabi/include/machine/_default_types.h"
- 580              		.file 3 "/home/niklas/gcc-arm-none-eabi-5_4-2016q3/arm-none-eabi/include/sys/_stdint.h"
- 581              		.file 4 "./Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
- 582              		.file 5 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 583              		.file 6 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
- 584              		.file 7 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
- 585              		.file 8 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h"
- 586              		.file 9 "./Inc/pid.h"
- 587              		.file 10 "./Drivers/CMSIS/Include/core_cm3.h"
- 588              		.file 11 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
- 589              		.file 12 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
-ARM GAS  /tmp/ccCKUA4O.s 			page 15
+ 625              		.file 13 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
+ 626              		.file 14 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h"
+ 627              		.file 15 "./Inc/pid.h"
+ 628              		.file 16 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 629              		.file 17 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ARM GAS  /tmp/ccz85a5A.s 			page 16
 
 
 DEFINED SYMBOLS
-                            *ABS*:00000000 pid.c
-     /tmp/ccCKUA4O.s:20     .text.PID_init:00000000 $t
-     /tmp/ccCKUA4O.s:25     .text.PID_init:00000000 PID_init
-     /tmp/ccCKUA4O.s:148    .text.PID_init:0000009c $d
-                            *COM*:0000003c Tim3PID
-                            *COM*:0000001c pid_L_Dati
-                            *COM*:0000001c pid_R_Dati
-                            *COM*:00000008 pid_L_
-                            *COM*:00000008 pid_R_
-     /tmp/ccCKUA4O.s:159    .text.PID_set_L_costant:00000000 $t
-     /tmp/ccCKUA4O.s:164    .text.PID_set_L_costant:00000000 PID_set_L_costant
-     /tmp/ccCKUA4O.s:183    .text.PID_set_L_costant:0000000c $d
-     /tmp/ccCKUA4O.s:188    .text.PID_set_R_costant:00000000 $t
-     /tmp/ccCKUA4O.s:193    .text.PID_set_R_costant:00000000 PID_set_R_costant
-     /tmp/ccCKUA4O.s:212    .text.PID_set_R_costant:0000000c $d
-     /tmp/ccCKUA4O.s:222    .text.pid_update_f:00000000 $t
-     /tmp/ccCKUA4O.s:227    .text.pid_update_f:00000000 pid_update_f
-     /tmp/ccCKUA4O.s:336    .text.pid_update_I32:00000000 $t
-     /tmp/ccCKUA4O.s:341    .text.pid_update_I32:00000000 pid_update_I32
-     /tmp/ccCKUA4O.s:454    .text.pid_update_I32:00000098 $d
-     /tmp/ccCKUA4O.s:459    .text.PID_L_task:00000000 $t
-     /tmp/ccCKUA4O.s:464    .text.PID_L_task:00000000 PID_L_task
-     /tmp/ccCKUA4O.s:508    .text.PID_L_task:0000002c $d
-     /tmp/ccCKUA4O.s:514    .text.PID_R_task:00000000 $t
-     /tmp/ccCKUA4O.s:519    .text.PID_R_task:00000000 PID_R_task
-     /tmp/ccCKUA4O.s:566    .text.PID_R_task:00000030 $d
-                     .debug_frame:00000010 $d
+                            *ABS*:0000000000000000 pid.c
+     /tmp/ccz85a5A.s:16     .text.PID_init:0000000000000000 $t
+     /tmp/ccz85a5A.s:23     .text.PID_init:0000000000000000 PID_init
+     /tmp/ccz85a5A.s:153    .text.PID_init:00000000000000a0 $d
+                            *COM*:000000000000003c Tim3PID
+                            *COM*:000000000000001c pid_L_Dati
+                            *COM*:000000000000001c pid_R_Dati
+                            *COM*:0000000000000008 pid_L_
+                            *COM*:0000000000000008 pid_R_
+     /tmp/ccz85a5A.s:164    .text.PID_set_L_costant:0000000000000000 $t
+     /tmp/ccz85a5A.s:171    .text.PID_set_L_costant:0000000000000000 PID_set_L_costant
+     /tmp/ccz85a5A.s:191    .text.PID_set_L_costant:000000000000000c $d
+     /tmp/ccz85a5A.s:196    .text.PID_set_R_costant:0000000000000000 $t
+     /tmp/ccz85a5A.s:203    .text.PID_set_R_costant:0000000000000000 PID_set_R_costant
+     /tmp/ccz85a5A.s:223    .text.PID_set_R_costant:000000000000000c $d
+     /tmp/ccz85a5A.s:233    .text.pid_update_f:0000000000000000 $t
+     /tmp/ccz85a5A.s:240    .text.pid_update_f:0000000000000000 pid_update_f
+     /tmp/ccz85a5A.s:354    .text.pid_update_I32:0000000000000000 $t
+     /tmp/ccz85a5A.s:361    .text.pid_update_I32:0000000000000000 pid_update_I32
+     /tmp/ccz85a5A.s:477    .text.pid_update_I32:0000000000000098 $d
+     /tmp/ccz85a5A.s:482    .text.PID_L_task:0000000000000000 $t
+     /tmp/ccz85a5A.s:489    .text.PID_L_task:0000000000000000 PID_L_task
+     /tmp/ccz85a5A.s:537    .text.PID_L_task:000000000000002c $d
+     /tmp/ccz85a5A.s:543    .text.PID_R_task:0000000000000000 $t
+     /tmp/ccz85a5A.s:550    .text.PID_R_task:0000000000000000 PID_R_task
+     /tmp/ccz85a5A.s:601    .text.PID_R_task:0000000000000030 $d
+                     .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
 HAL_TIM_Base_Init
 HAL_TIM_ConfigClockSource
-Error_Handler
 HAL_TIMEx_MasterConfigSynchronization
 HAL_TIM_Base_Start_IT
 HAL_NVIC_SetPriority
 HAL_NVIC_EnableIRQ
 HAL_GetTick
+Error_Handler
 __aeabi_fsub
 __aeabi_fadd
 __aeabi_fmul
-__aeabi_fcmplt
 __aeabi_fcmpgt
+__aeabi_fcmplt
 __aeabi_i2f
 __aeabi_f2iz
 testVelR

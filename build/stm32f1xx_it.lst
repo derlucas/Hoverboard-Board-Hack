@@ -1,36 +1,30 @@
-<<<<<<< HEAD
-ARM GAS  /tmp/ccV25QEa.s 			page 1
-=======
-ARM GAS  /tmp/ccFqqBor.s 			page 1
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
+ARM GAS  /tmp/ccBcR8ou.s 			page 1
 
 
-   1              		.syntax unified
-   2              		.cpu cortex-m3
-   3              		.fpu softvfp
-   4              		.eabi_attribute 20, 1
-   5              		.eabi_attribute 21, 1
-   6              		.eabi_attribute 23, 3
-   7              		.eabi_attribute 24, 1
-   8              		.eabi_attribute 25, 1
-   9              		.eabi_attribute 26, 1
-  10              		.eabi_attribute 30, 1
-  11              		.eabi_attribute 34, 1
-  12              		.eabi_attribute 18, 4
-  13              		.thumb
-  14              		.syntax unified
-  15              		.file	"stm32f1xx_it.c"
-  16              		.text
-  17              	.Ltext0:
-  18              		.cfi_sections	.debug_frame
-  19              		.section	.text.NMI_Handler,"ax",%progbits
-  20              		.align	2
-  21              		.global	NMI_Handler
-  22              		.thumb
-  23              		.thumb_func
-  25              	NMI_Handler:
-  26              	.LFB64:
-  27              		.file 1 "./Src/stm32f1xx_it.c"
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_it.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.NMI_Handler,"ax",%progbits
+  16              		.align	1
+  17              		.global	NMI_Handler
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	NMI_Handler:
+  24              	.LFB66:
+  25              		.file 1 "./Src/stm32f1xx_it.c"
    1:./Src/stm32f1xx_it.c **** /**
    2:./Src/stm32f1xx_it.c ****   ******************************************************************************
    3:./Src/stm32f1xx_it.c ****   * @file    stm32f1xx_it.c
@@ -62,15 +56,11 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
   29:./Src/stm32f1xx_it.c ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   30:./Src/stm32f1xx_it.c ****   *
   31:./Src/stm32f1xx_it.c ****   ******************************************************************************
-<<<<<<< HEAD
-ARM GAS  /tmp/ccV25QEa.s 			page 2
-=======
-ARM GAS  /tmp/ccFqqBor.s 			page 2
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
-
-
   32:./Src/stm32f1xx_it.c ****   */
   33:./Src/stm32f1xx_it.c **** /* Includes ------------------------------------------------------------------*/
+ARM GAS  /tmp/ccBcR8ou.s 			page 2
+
+
   34:./Src/stm32f1xx_it.c **** #include "stm32f1xx_hal.h"
   35:./Src/stm32f1xx_it.c **** #include "stm32f1xx.h"
   36:./Src/stm32f1xx_it.c **** #include "stm32f1xx_it.h"
@@ -110,33 +100,27 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
   70:./Src/stm32f1xx_it.c **** */
   71:./Src/stm32f1xx_it.c **** void NMI_Handler(void)
   72:./Src/stm32f1xx_it.c **** {
-  28              		.loc 1 72 0
-  29              		.cfi_startproc
-  30              		@ Volatile: function does not return.
-  31              		@ args = 0, pretend = 0, frame = 0
-  32              		@ frame_needed = 0, uses_anonymous_args = 0
-  33              		@ link register save eliminated.
-  34              	.L2:
-  35              	.LBB20:
-  36              	.LBB21:
-  37              		.file 2 "./Drivers/CMSIS/Include/cmsis_gcc.h"
+  26              		.loc 1 72 0
+  27              		.cfi_startproc
+  28              		@ Volatile: function does not return.
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32              	.L2:
+  33              	.LBB20:
+  34              	.LBB21:
+  35              		.file 2 "./Drivers/CMSIS/Include/cmsis_gcc.h"
    1:./Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
    2:./Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
    3:./Drivers/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS Cortex-M Core Function/Instruction Header File
    4:./Drivers/CMSIS/Include/cmsis_gcc.h ****  * @version  V4.30
    5:./Drivers/CMSIS/Include/cmsis_gcc.h ****  * @date     20. October 2015
    6:./Drivers/CMSIS/Include/cmsis_gcc.h ****  ******************************************************************************/
-<<<<<<< HEAD
-ARM GAS  /tmp/ccV25QEa.s 			page 3
-=======
    7:./Drivers/CMSIS/Include/cmsis_gcc.h **** /* Copyright (c) 2009 - 2015 ARM LIMITED
    8:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccFqqBor.s 			page 3
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
+ARM GAS  /tmp/ccBcR8ou.s 			page 3
 
 
-   7:./Drivers/CMSIS/Include/cmsis_gcc.h **** /* Copyright (c) 2009 - 2015 ARM LIMITED
-   8:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
    9:./Drivers/CMSIS/Include/cmsis_gcc.h ****    All rights reserved.
   10:./Drivers/CMSIS/Include/cmsis_gcc.h ****    Redistribution and use in source and binary forms, with or without
   11:./Drivers/CMSIS/Include/cmsis_gcc.h ****    modification, are permitted provided that the following conditions are met:
@@ -192,17 +176,11 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
   61:./Drivers/CMSIS/Include/cmsis_gcc.h **** }
   62:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
   63:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
-<<<<<<< HEAD
-ARM GAS  /tmp/ccV25QEa.s 			page 4
-=======
   64:./Drivers/CMSIS/Include/cmsis_gcc.h **** /**
   65:./Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
-ARM GAS  /tmp/ccFqqBor.s 			page 4
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
+ARM GAS  /tmp/ccBcR8ou.s 			page 4
 
 
-  64:./Drivers/CMSIS/Include/cmsis_gcc.h **** /**
-  65:./Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable IRQ Interrupts
   66:./Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Disables IRQ interrupts by setting the I-bit in the CPSR.
   67:./Drivers/CMSIS/Include/cmsis_gcc.h ****   Can only be executed in Privileged modes.
   68:./Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -258,17 +236,11 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  118:./Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  119:./Drivers/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_APSR(void)
  120:./Drivers/CMSIS/Include/cmsis_gcc.h **** {
-<<<<<<< HEAD
-ARM GAS  /tmp/ccV25QEa.s 			page 5
-=======
  121:./Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
  122:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccFqqBor.s 			page 5
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
+ARM GAS  /tmp/ccBcR8ou.s 			page 5
 
 
- 121:./Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
- 122:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
  123:./Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, apsr" : "=r" (result) );
  124:./Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  125:./Drivers/CMSIS/Include/cmsis_gcc.h **** }
@@ -324,17 +296,11 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  175:./Drivers/CMSIS/Include/cmsis_gcc.h ****   register uint32_t result;
  176:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
  177:./Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msp\n" : "=r" (result) );
-<<<<<<< HEAD
-ARM GAS  /tmp/ccV25QEa.s 			page 6
-=======
  178:./Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  179:./Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  /tmp/ccFqqBor.s 			page 6
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
+ARM GAS  /tmp/ccBcR8ou.s 			page 6
 
 
- 178:./Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
- 179:./Drivers/CMSIS/Include/cmsis_gcc.h **** }
  180:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
  181:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
  182:./Drivers/CMSIS/Include/cmsis_gcc.h **** /**
@@ -390,17 +356,11 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  232:./Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  233:./Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Disable FIQ
  234:./Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Disables FIQ interrupts by setting the F-bit in the CPSR.
-<<<<<<< HEAD
-ARM GAS  /tmp/ccV25QEa.s 			page 7
-=======
  235:./Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
  236:./Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  /tmp/ccFqqBor.s 			page 7
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
+ARM GAS  /tmp/ccBcR8ou.s 			page 7
 
 
- 235:./Drivers/CMSIS/Include/cmsis_gcc.h ****            Can only be executed in Privileged modes.
- 236:./Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  237:./Drivers/CMSIS/Include/cmsis_gcc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __disable_fault_irq(void)
  238:./Drivers/CMSIS/Include/cmsis_gcc.h **** {
  239:./Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("cpsid f" : : : "memory");
@@ -456,17 +416,11 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  289:./Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, faultmask" : "=r" (result) );
  290:./Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  291:./Drivers/CMSIS/Include/cmsis_gcc.h **** }
-<<<<<<< HEAD
-ARM GAS  /tmp/ccV25QEa.s 			page 8
-=======
  292:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
  293:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccFqqBor.s 			page 8
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
+ARM GAS  /tmp/ccBcR8ou.s 			page 8
 
 
- 292:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
- 293:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
  294:./Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  295:./Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Fault Mask
  296:./Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the Fault Mask register.
@@ -522,17 +476,11 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  346:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
  347:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
  348:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
-<<<<<<< HEAD
-ARM GAS  /tmp/ccV25QEa.s 			page 9
-=======
  349:./Drivers/CMSIS/Include/cmsis_gcc.h **** /*@} end of CMSIS_Core_RegAccFunctions */
  350:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  /tmp/ccFqqBor.s 			page 9
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
+ARM GAS  /tmp/ccBcR8ou.s 			page 9
 
 
- 349:./Drivers/CMSIS/Include/cmsis_gcc.h **** /*@} end of CMSIS_Core_RegAccFunctions */
- 350:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
  351:./Drivers/CMSIS/Include/cmsis_gcc.h **** 
  352:./Drivers/CMSIS/Include/cmsis_gcc.h **** /* ##########################  Core Instruction Access  ######################### */
  353:./Drivers/CMSIS/Include/cmsis_gcc.h **** /** \defgroup CMSIS_Core_InstructionInterface CMSIS Core Instruction Interface
@@ -558,54 +506,50 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  373:./Drivers/CMSIS/Include/cmsis_gcc.h **** __attribute__((always_inline)) __STATIC_INLINE void __NOP(void)
  374:./Drivers/CMSIS/Include/cmsis_gcc.h **** {
  375:./Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("nop");
-  38              		.loc 2 375 0 discriminator 1
-  39              		.syntax unified
-  40              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
-  41 0000 00BF     		nop
-  42              	@ 0 "" 2
-  43              		.thumb
-  44              		.syntax unified
-  45              	.LBE21:
-  46              	.LBE20:
-  47              	.LBB22:
-  48              	.LBB23:
-  49              		.syntax unified
-  50              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
-  51 0002 00BF     		nop
-  52              	@ 0 "" 2
-  53              		.thumb
-  54              		.syntax unified
-  55              	.LBE23:
-  56              	.LBE22:
-  57              	.LBB24:
-  58              	.LBB25:
-  59              		.syntax unified
-  60              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
-  61 0004 00BF     		nop
-  62              	@ 0 "" 2
-  63              		.thumb
-  64              		.syntax unified
-  65 0006 FBE7     		b	.L2
-  66              	.LBE25:
-  67              	.LBE24:
-<<<<<<< HEAD
-ARM GAS  /tmp/ccV25QEa.s 			page 10
-=======
-  68              		.cfi_endproc
-  69              	.LFE64:
-ARM GAS  /tmp/ccFqqBor.s 			page 10
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
+  36              		.loc 2 375 0 discriminator 1
+  37              		.syntax unified
+  38              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
+  39 0000 00BF     		nop
+  40              	@ 0 "" 2
+  41              		.thumb
+  42              		.syntax unified
+  43              	.LBE21:
+  44              	.LBE20:
+  45              	.LBB22:
+  46              	.LBB23:
+  47              		.syntax unified
+  48              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
+  49 0002 00BF     		nop
+  50              	@ 0 "" 2
+  51              		.thumb
+  52              		.syntax unified
+  53              	.LBE23:
+  54              	.LBE22:
+  55              	.LBB24:
+  56              	.LBB25:
+  57              		.syntax unified
+  58              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
+  59 0004 00BF     		nop
+  60              	@ 0 "" 2
+  61              		.thumb
+  62              		.syntax unified
+  63 0006 FBE7     		b	.L2
+  64              	.LBE25:
+  65              	.LBE24:
+  66              		.cfi_endproc
+  67              	.LFE66:
+ARM GAS  /tmp/ccBcR8ou.s 			page 10
 
 
-  68              		.cfi_endproc
-  69              	.LFE64:
-  71              		.section	.text.HardFault_Handler,"ax",%progbits
-  72              		.align	2
-  73              		.global	HardFault_Handler
-  74              		.thumb
-  75              		.thumb_func
+  69              		.section	.text.HardFault_Handler,"ax",%progbits
+  70              		.align	1
+  71              		.global	HardFault_Handler
+  72              		.syntax unified
+  73              		.thumb
+  74              		.thumb_func
+  75              		.fpu softvfp
   77              	HardFault_Handler:
-  78              	.LFB65:
+  78              	.LFB67:
   73:./Src/stm32f1xx_it.c ****   while(1){
   74:./Src/stm32f1xx_it.c ****     __NOP();
   75:./Src/stm32f1xx_it.c ****     __NOP();
@@ -646,23 +590,19 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
   95              	.L4:
   96 000a FEE7     		b	.L4
   97              		.cfi_endproc
-  98              	.LFE65:
+  98              	.LFE67:
  100              		.section	.text.MemManage_Handler,"ax",%progbits
- 101              		.align	2
+ 101              		.align	1
  102              		.global	MemManage_Handler
- 103              		.thumb
- 104              		.thumb_func
- 106              	MemManage_Handler:
- 107              	.LFB66:
-<<<<<<< HEAD
-ARM GAS  /tmp/ccV25QEa.s 			page 11
-=======
-  92:./Src/stm32f1xx_it.c **** 
-  93:./Src/stm32f1xx_it.c ****   /* USER CODE END HardFault_IRQn 0 */
-ARM GAS  /tmp/ccFqqBor.s 			page 11
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
+ 103              		.syntax unified
+ 104              		.thumb
+ 105              		.thumb_func
+ 106              		.fpu softvfp
+ARM GAS  /tmp/ccBcR8ou.s 			page 11
 
 
+ 108              	MemManage_Handler:
+ 109              	.LFB68:
   94:./Src/stm32f1xx_it.c **** 
   95:./Src/stm32f1xx_it.c ****   /* USER CODE END HardFault_IRQn 0 */
   96:./Src/stm32f1xx_it.c ****   while (1)
@@ -678,37 +618,38 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  106:./Src/stm32f1xx_it.c **** */
  107:./Src/stm32f1xx_it.c **** void MemManage_Handler(void)
  108:./Src/stm32f1xx_it.c **** {
- 108              		.loc 1 108 0
- 109              		.cfi_startproc
- 110              		@ Volatile: function does not return.
- 111              		@ args = 0, pretend = 0, frame = 0
- 112              		@ frame_needed = 0, uses_anonymous_args = 0
- 113 0000 08B5     		push	{r3, lr}
- 114              	.LCFI1:
- 115              		.cfi_def_cfa_offset 8
- 116              		.cfi_offset 3, -8
- 117              		.cfi_offset 14, -4
+ 110              		.loc 1 108 0
+ 111              		.cfi_startproc
+ 112              		@ Volatile: function does not return.
+ 113              		@ args = 0, pretend = 0, frame = 0
+ 114              		@ frame_needed = 0, uses_anonymous_args = 0
+ 115 0000 08B5     		push	{r3, lr}
+ 116              	.LCFI1:
+ 117              		.cfi_def_cfa_offset 8
+ 118              		.cfi_offset 3, -8
+ 119              		.cfi_offset 14, -4
  109:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN MemoryManagement_IRQn 0 */
  110:./Src/stm32f1xx_it.c ****   MotorR_stop();
- 118              		.loc 1 110 0
- 119 0002 FFF7FEFF 		bl	MotorR_stop
- 120              	.LVL2:
+ 120              		.loc 1 110 0
+ 121 0002 FFF7FEFF 		bl	MotorR_stop
+ 122              	.LVL2:
  111:./Src/stm32f1xx_it.c ****   MotorL_stop();  
- 121              		.loc 1 111 0
- 122 0006 FFF7FEFF 		bl	MotorL_stop
- 123              	.LVL3:
- 124              	.L7:
- 125 000a FEE7     		b	.L7
- 126              		.cfi_endproc
- 127              	.LFE66:
- 129              		.section	.text.BusFault_Handler,"ax",%progbits
- 130              		.align	2
- 131              		.global	BusFault_Handler
- 132              		.thumb
- 133              		.thumb_func
- 135              	BusFault_Handler:
- 136              	.LFB67:
-<<<<<<< HEAD
+ 123              		.loc 1 111 0
+ 124 0006 FFF7FEFF 		bl	MotorL_stop
+ 125              	.LVL3:
+ 126              	.L7:
+ 127 000a FEE7     		b	.L7
+ 128              		.cfi_endproc
+ 129              	.LFE68:
+ 131              		.section	.text.BusFault_Handler,"ax",%progbits
+ 132              		.align	1
+ 133              		.global	BusFault_Handler
+ 134              		.syntax unified
+ 135              		.thumb
+ 136              		.thumb_func
+ 137              		.fpu softvfp
+ 139              	BusFault_Handler:
+ 140              	.LFB69:
  112:./Src/stm32f1xx_it.c ****   /* USER CODE END MemoryManagement_IRQn 0 */
  113:./Src/stm32f1xx_it.c ****   while (1)
  114:./Src/stm32f1xx_it.c ****   {
@@ -717,62 +658,47 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  117:./Src/stm32f1xx_it.c **** 
  118:./Src/stm32f1xx_it.c ****   /* USER CODE END MemoryManagement_IRQn 1 */
  119:./Src/stm32f1xx_it.c **** }
+ARM GAS  /tmp/ccBcR8ou.s 			page 12
+
+
  120:./Src/stm32f1xx_it.c **** 
  121:./Src/stm32f1xx_it.c **** /**
  122:./Src/stm32f1xx_it.c **** * @brief This function handles Prefetch fault, memory access fault.
  123:./Src/stm32f1xx_it.c **** */
-ARM GAS  /tmp/ccV25QEa.s 			page 12
-=======
- 110:./Src/stm32f1xx_it.c ****   /* USER CODE END MemoryManagement_IRQn 0 */
- 111:./Src/stm32f1xx_it.c ****   while (1)
- 112:./Src/stm32f1xx_it.c ****   {
- 113:./Src/stm32f1xx_it.c ****   }
- 114:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN MemoryManagement_IRQn 1 */
- 115:./Src/stm32f1xx_it.c **** 
- 116:./Src/stm32f1xx_it.c ****   /* USER CODE END MemoryManagement_IRQn 1 */
- 117:./Src/stm32f1xx_it.c **** }
- 118:./Src/stm32f1xx_it.c **** 
- 119:./Src/stm32f1xx_it.c **** /**
- 120:./Src/stm32f1xx_it.c **** * @brief This function handles Prefetch fault, memory access fault.
- 121:./Src/stm32f1xx_it.c **** */
- 122:./Src/stm32f1xx_it.c **** void BusFault_Handler(void)
- 123:./Src/stm32f1xx_it.c **** {
-ARM GAS  /tmp/ccFqqBor.s 			page 12
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
-
-
  124:./Src/stm32f1xx_it.c **** void BusFault_Handler(void)
  125:./Src/stm32f1xx_it.c **** {
- 137              		.loc 1 125 0
- 138              		.cfi_startproc
- 139              		@ Volatile: function does not return.
- 140              		@ args = 0, pretend = 0, frame = 0
- 141              		@ frame_needed = 0, uses_anonymous_args = 0
- 142 0000 08B5     		push	{r3, lr}
- 143              	.LCFI2:
- 144              		.cfi_def_cfa_offset 8
- 145              		.cfi_offset 3, -8
- 146              		.cfi_offset 14, -4
+ 141              		.loc 1 125 0
+ 142              		.cfi_startproc
+ 143              		@ Volatile: function does not return.
+ 144              		@ args = 0, pretend = 0, frame = 0
+ 145              		@ frame_needed = 0, uses_anonymous_args = 0
+ 146 0000 08B5     		push	{r3, lr}
+ 147              	.LCFI2:
+ 148              		.cfi_def_cfa_offset 8
+ 149              		.cfi_offset 3, -8
+ 150              		.cfi_offset 14, -4
  126:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN BusFault_IRQn 0 */
  127:./Src/stm32f1xx_it.c ****   MotorR_stop();
- 147              		.loc 1 127 0
- 148 0002 FFF7FEFF 		bl	MotorR_stop
- 149              	.LVL4:
+ 151              		.loc 1 127 0
+ 152 0002 FFF7FEFF 		bl	MotorR_stop
+ 153              	.LVL4:
  128:./Src/stm32f1xx_it.c ****   MotorL_stop();  
- 150              		.loc 1 128 0
- 151 0006 FFF7FEFF 		bl	MotorL_stop
- 152              	.LVL5:
- 153              	.L10:
- 154 000a FEE7     		b	.L10
- 155              		.cfi_endproc
- 156              	.LFE67:
- 158              		.section	.text.UsageFault_Handler,"ax",%progbits
- 159              		.align	2
- 160              		.global	UsageFault_Handler
- 161              		.thumb
- 162              		.thumb_func
- 164              	UsageFault_Handler:
- 165              	.LFB68:
+ 154              		.loc 1 128 0
+ 155 0006 FFF7FEFF 		bl	MotorL_stop
+ 156              	.LVL5:
+ 157              	.L10:
+ 158 000a FEE7     		b	.L10
+ 159              		.cfi_endproc
+ 160              	.LFE69:
+ 162              		.section	.text.UsageFault_Handler,"ax",%progbits
+ 163              		.align	1
+ 164              		.global	UsageFault_Handler
+ 165              		.syntax unified
+ 166              		.thumb
+ 167              		.thumb_func
+ 168              		.fpu softvfp
+ 170              	UsageFault_Handler:
+ 171              	.LFB70:
  129:./Src/stm32f1xx_it.c ****   /* USER CODE END BusFault_IRQn 0 */
  130:./Src/stm32f1xx_it.c ****   while (1)
  131:./Src/stm32f1xx_it.c ****   {
@@ -787,46 +713,41 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  140:./Src/stm32f1xx_it.c **** */
  141:./Src/stm32f1xx_it.c **** void UsageFault_Handler(void)
  142:./Src/stm32f1xx_it.c **** {
- 166              		.loc 1 142 0
- 167              		.cfi_startproc
- 168              		@ Volatile: function does not return.
- 169              		@ args = 0, pretend = 0, frame = 0
- 170              		@ frame_needed = 0, uses_anonymous_args = 0
- 171 0000 08B5     		push	{r3, lr}
- 172              	.LCFI3:
- 173              		.cfi_def_cfa_offset 8
- 174              		.cfi_offset 3, -8
- 175              		.cfi_offset 14, -4
-<<<<<<< HEAD
+ 172              		.loc 1 142 0
+ 173              		.cfi_startproc
+ 174              		@ Volatile: function does not return.
+ 175              		@ args = 0, pretend = 0, frame = 0
+ 176              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccBcR8ou.s 			page 13
+
+
+ 177 0000 08B5     		push	{r3, lr}
+ 178              	.LCFI3:
+ 179              		.cfi_def_cfa_offset 8
+ 180              		.cfi_offset 3, -8
+ 181              		.cfi_offset 14, -4
  143:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN UsageFault_IRQn 0 */
-ARM GAS  /tmp/ccV25QEa.s 			page 13
-=======
- 141:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN UsageFault_IRQn 0 */
- 142:./Src/stm32f1xx_it.c ****   MotorR_stop();
- 176              		.loc 1 142 0
-ARM GAS  /tmp/ccFqqBor.s 			page 13
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
-
-
  144:./Src/stm32f1xx_it.c ****   MotorR_stop();
- 176              		.loc 1 144 0
- 177 0002 FFF7FEFF 		bl	MotorR_stop
- 178              	.LVL6:
+ 182              		.loc 1 144 0
+ 183 0002 FFF7FEFF 		bl	MotorR_stop
+ 184              	.LVL6:
  145:./Src/stm32f1xx_it.c ****   MotorL_stop();  
- 179              		.loc 1 145 0
- 180 0006 FFF7FEFF 		bl	MotorL_stop
- 181              	.LVL7:
- 182              	.L13:
- 183 000a FEE7     		b	.L13
- 184              		.cfi_endproc
- 185              	.LFE68:
- 187              		.section	.text.SVC_Handler,"ax",%progbits
- 188              		.align	2
- 189              		.global	SVC_Handler
- 190              		.thumb
- 191              		.thumb_func
- 193              	SVC_Handler:
- 194              	.LFB69:
+ 185              		.loc 1 145 0
+ 186 0006 FFF7FEFF 		bl	MotorL_stop
+ 187              	.LVL7:
+ 188              	.L13:
+ 189 000a FEE7     		b	.L13
+ 190              		.cfi_endproc
+ 191              	.LFE70:
+ 193              		.section	.text.SVC_Handler,"ax",%progbits
+ 194              		.align	1
+ 195              		.global	SVC_Handler
+ 196              		.syntax unified
+ 197              		.thumb
+ 198              		.thumb_func
+ 199              		.fpu softvfp
+ 201              	SVC_Handler:
+ 202              	.LFB71:
  146:./Src/stm32f1xx_it.c ****   /* USER CODE END UsageFault_IRQn 0 */
  147:./Src/stm32f1xx_it.c ****   while (1)
  148:./Src/stm32f1xx_it.c ****   {
@@ -841,63 +762,59 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  157:./Src/stm32f1xx_it.c **** */
  158:./Src/stm32f1xx_it.c **** void SVC_Handler(void)
  159:./Src/stm32f1xx_it.c **** {
- 195              		.loc 1 159 0
- 196              		.cfi_startproc
- 197              		@ Volatile: function does not return.
- 198              		@ args = 0, pretend = 0, frame = 0
- 199              		@ frame_needed = 0, uses_anonymous_args = 0
- 200              		@ link register save eliminated.
- 201              	.L16:
- 202              	.LBB26:
- 203              	.LBB27:
- 204              		.loc 2 375 0 discriminator 1
- 205              		.syntax unified
- 206              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 207 0000 00BF     		nop
- 208              	@ 0 "" 2
- 209              		.thumb
- 210              		.syntax unified
- 211              	.LBE27:
- 212              	.LBE26:
- 213              	.LBB28:
- 214              	.LBB29:
- 215              		.syntax unified
- 216              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 217 0002 00BF     		nop
- 218              	@ 0 "" 2
-<<<<<<< HEAD
-ARM GAS  /tmp/ccV25QEa.s 			page 14
-=======
- 219              		.thumb
- 220              		.syntax unified
-ARM GAS  /tmp/ccFqqBor.s 			page 14
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
+ 203              		.loc 1 159 0
+ 204              		.cfi_startproc
+ 205              		@ Volatile: function does not return.
+ 206              		@ args = 0, pretend = 0, frame = 0
+ 207              		@ frame_needed = 0, uses_anonymous_args = 0
+ 208              		@ link register save eliminated.
+ 209              	.L16:
+ 210              	.LBB26:
+ 211              	.LBB27:
+ 212              		.loc 2 375 0 discriminator 1
+ 213              		.syntax unified
+ 214              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 215 0000 00BF     		nop
+ 216              	@ 0 "" 2
+ 217              		.thumb
+ 218              		.syntax unified
+ARM GAS  /tmp/ccBcR8ou.s 			page 14
 
 
- 219              		.thumb
- 220              		.syntax unified
- 221              	.LBE29:
- 222              	.LBE28:
- 223              	.LBB30:
- 224              	.LBB31:
- 225              		.syntax unified
- 226              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 227 0004 00BF     		nop
- 228              	@ 0 "" 2
- 229              		.thumb
- 230              		.syntax unified
- 231 0006 FBE7     		b	.L16
- 232              	.LBE31:
- 233              	.LBE30:
- 234              		.cfi_endproc
- 235              	.LFE69:
- 237              		.section	.text.DebugMon_Handler,"ax",%progbits
- 238              		.align	2
- 239              		.global	DebugMon_Handler
- 240              		.thumb
- 241              		.thumb_func
- 243              	DebugMon_Handler:
- 244              	.LFB70:
+ 219              	.LBE27:
+ 220              	.LBE26:
+ 221              	.LBB28:
+ 222              	.LBB29:
+ 223              		.syntax unified
+ 224              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 225 0002 00BF     		nop
+ 226              	@ 0 "" 2
+ 227              		.thumb
+ 228              		.syntax unified
+ 229              	.LBE29:
+ 230              	.LBE28:
+ 231              	.LBB30:
+ 232              	.LBB31:
+ 233              		.syntax unified
+ 234              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 235 0004 00BF     		nop
+ 236              	@ 0 "" 2
+ 237              		.thumb
+ 238              		.syntax unified
+ 239 0006 FBE7     		b	.L16
+ 240              	.LBE31:
+ 241              	.LBE30:
+ 242              		.cfi_endproc
+ 243              	.LFE71:
+ 245              		.section	.text.DebugMon_Handler,"ax",%progbits
+ 246              		.align	1
+ 247              		.global	DebugMon_Handler
+ 248              		.syntax unified
+ 249              		.thumb
+ 250              		.thumb_func
+ 251              		.fpu softvfp
+ 253              	DebugMon_Handler:
+ 254              	.LFB72:
  160:./Src/stm32f1xx_it.c ****   while(1){
  161:./Src/stm32f1xx_it.c ****     __NOP();
  162:./Src/stm32f1xx_it.c ****     __NOP();
@@ -917,30 +834,14 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  176:./Src/stm32f1xx_it.c **** */
  177:./Src/stm32f1xx_it.c **** void DebugMon_Handler(void)
  178:./Src/stm32f1xx_it.c **** {
- 245              		.loc 1 178 0
- 246              		.cfi_startproc
- 247              		@ args = 0, pretend = 0, frame = 0
- 248              		@ frame_needed = 0, uses_anonymous_args = 0
- 249              		@ link register save eliminated.
- 250 0000 7047     		bx	lr
- 251              		.cfi_endproc
- 252              	.LFE70:
- 254 0002 00BF     		.section	.text.PendSV_Handler,"ax",%progbits
- 255              		.align	2
- 256              		.global	PendSV_Handler
- 257              		.thumb
- 258              		.thumb_func
- 260              	PendSV_Handler:
-<<<<<<< HEAD
-ARM GAS  /tmp/ccV25QEa.s 			page 15
-=======
- 261              	.LFB71:
- 177:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DebugMonitor_IRQn 0 */
-ARM GAS  /tmp/ccFqqBor.s 			page 15
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
+ 255              		.loc 1 178 0
+ 256              		.cfi_startproc
+ 257              		@ args = 0, pretend = 0, frame = 0
+ 258              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  /tmp/ccBcR8ou.s 			page 15
 
 
- 261              	.LFB71:
+ 259              		@ link register save eliminated.
  179:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DebugMonitor_IRQn 0 */
  180:./Src/stm32f1xx_it.c **** 
  181:./Src/stm32f1xx_it.c ****   /* USER CODE END DebugMonitor_IRQn 0 */
@@ -948,69 +849,78 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  183:./Src/stm32f1xx_it.c **** 
  184:./Src/stm32f1xx_it.c ****   /* USER CODE END DebugMonitor_IRQn 1 */
  185:./Src/stm32f1xx_it.c **** }
+ 260              		.loc 1 185 0
+ 261 0000 7047     		bx	lr
+ 262              		.cfi_endproc
+ 263              	.LFE72:
+ 265              		.section	.text.PendSV_Handler,"ax",%progbits
+ 266              		.align	1
+ 267              		.global	PendSV_Handler
+ 268              		.syntax unified
+ 269              		.thumb
+ 270              		.thumb_func
+ 271              		.fpu softvfp
+ 273              	PendSV_Handler:
+ 274              	.LFB73:
  186:./Src/stm32f1xx_it.c **** 
  187:./Src/stm32f1xx_it.c **** /**
  188:./Src/stm32f1xx_it.c **** * @brief This function handles Pendable request for system service.
  189:./Src/stm32f1xx_it.c **** */
  190:./Src/stm32f1xx_it.c **** void PendSV_Handler(void)
  191:./Src/stm32f1xx_it.c **** {
- 262              		.loc 1 191 0
- 263              		.cfi_startproc
- 264              		@ Volatile: function does not return.
- 265              		@ args = 0, pretend = 0, frame = 0
- 266              		@ frame_needed = 0, uses_anonymous_args = 0
- 267              		@ link register save eliminated.
- 268              	.L19:
- 269              	.LBB32:
- 270              	.LBB33:
- 271              		.loc 2 375 0 discriminator 1
- 272              		.syntax unified
- 273              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 274 0000 00BF     		nop
- 275              	@ 0 "" 2
- 276              		.thumb
- 277              		.syntax unified
- 278              	.LBE33:
- 279              	.LBE32:
- 280              	.LBB34:
- 281              	.LBB35:
- 282              		.syntax unified
- 283              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 284 0002 00BF     		nop
- 285              	@ 0 "" 2
- 286              		.thumb
- 287              		.syntax unified
- 288              	.LBE35:
- 289              	.LBE34:
- 290              	.LBB36:
- 291              	.LBB37:
- 292              		.syntax unified
- 293              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
- 294 0004 00BF     		nop
- 295              	@ 0 "" 2
- 296              		.thumb
- 297              		.syntax unified
- 298 0006 FBE7     		b	.L19
- 299              	.LBE37:
- 300              	.LBE36:
- 301              		.cfi_endproc
- 302              	.LFE71:
- 304              		.section	.text.SysTick_Handler,"ax",%progbits
- 305              		.align	2
-<<<<<<< HEAD
-ARM GAS  /tmp/ccV25QEa.s 			page 16
-=======
- 306              		.global	SysTick_Handler
- 307              		.thumb
-ARM GAS  /tmp/ccFqqBor.s 			page 16
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
+ 275              		.loc 1 191 0
+ 276              		.cfi_startproc
+ 277              		@ Volatile: function does not return.
+ 278              		@ args = 0, pretend = 0, frame = 0
+ 279              		@ frame_needed = 0, uses_anonymous_args = 0
+ 280              		@ link register save eliminated.
+ 281              	.L19:
+ 282              	.LBB32:
+ 283              	.LBB33:
+ 284              		.loc 2 375 0 discriminator 1
+ 285              		.syntax unified
+ 286              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 287 0000 00BF     		nop
+ 288              	@ 0 "" 2
+ 289              		.thumb
+ 290              		.syntax unified
+ 291              	.LBE33:
+ 292              	.LBE32:
+ 293              	.LBB34:
+ 294              	.LBB35:
+ 295              		.syntax unified
+ 296              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 297 0002 00BF     		nop
+ 298              	@ 0 "" 2
+ 299              		.thumb
+ 300              		.syntax unified
+ 301              	.LBE35:
+ 302              	.LBE34:
+ 303              	.LBB36:
+ 304              	.LBB37:
+ARM GAS  /tmp/ccBcR8ou.s 			page 16
 
 
- 306              		.global	SysTick_Handler
- 307              		.thumb
- 308              		.thumb_func
- 310              	SysTick_Handler:
- 311              	.LFB72:
+ 305              		.syntax unified
+ 306              	@ 375 "./Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 307 0004 00BF     		nop
+ 308              	@ 0 "" 2
+ 309              		.thumb
+ 310              		.syntax unified
+ 311 0006 FBE7     		b	.L19
+ 312              	.LBE37:
+ 313              	.LBE36:
+ 314              		.cfi_endproc
+ 315              	.LFE73:
+ 317              		.section	.text.SysTick_Handler,"ax",%progbits
+ 318              		.align	1
+ 319              		.global	SysTick_Handler
+ 320              		.syntax unified
+ 321              		.thumb
+ 322              		.thumb_func
+ 323              		.fpu softvfp
+ 325              	SysTick_Handler:
+ 326              	.LFB74:
  192:./Src/stm32f1xx_it.c ****   while(1){
  193:./Src/stm32f1xx_it.c ****     __NOP();
  194:./Src/stm32f1xx_it.c ****     __NOP();
@@ -1030,52 +940,46 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  208:./Src/stm32f1xx_it.c **** */
  209:./Src/stm32f1xx_it.c **** void SysTick_Handler(void)
  210:./Src/stm32f1xx_it.c **** {
- 312              		.loc 1 210 0
- 313              		.cfi_startproc
- 314              		@ args = 0, pretend = 0, frame = 0
- 315              		@ frame_needed = 0, uses_anonymous_args = 0
- 316 0000 08B5     		push	{r3, lr}
- 317              	.LCFI4:
- 318              		.cfi_def_cfa_offset 8
- 319              		.cfi_offset 3, -8
- 320              		.cfi_offset 14, -4
+ 327              		.loc 1 210 0
+ 328              		.cfi_startproc
+ 329              		@ args = 0, pretend = 0, frame = 0
+ 330              		@ frame_needed = 0, uses_anonymous_args = 0
+ 331 0000 08B5     		push	{r3, lr}
+ 332              	.LCFI4:
+ 333              		.cfi_def_cfa_offset 8
+ 334              		.cfi_offset 3, -8
+ 335              		.cfi_offset 14, -4
  211:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN SysTick_IRQn 0 */
  212:./Src/stm32f1xx_it.c **** 
  213:./Src/stm32f1xx_it.c ****   /* USER CODE END SysTick_IRQn 0 */
  214:./Src/stm32f1xx_it.c ****   HAL_IncTick();
- 321              		.loc 1 214 0
- 322 0002 FFF7FEFF 		bl	HAL_IncTick
- 323              	.LVL8:
+ 336              		.loc 1 214 0
+ 337 0002 FFF7FEFF 		bl	HAL_IncTick
+ 338              	.LVL8:
  215:./Src/stm32f1xx_it.c ****   HAL_SYSTICK_IRQHandler();
- 324              		.loc 1 215 0
- 325 0006 FFF7FEFF 		bl	HAL_SYSTICK_IRQHandler
- 326              	.LVL9:
- 327 000a 08BD     		pop	{r3, pc}
- 328              		.cfi_endproc
- 329              	.LFE72:
- 331              		.section	.text.I2C1_EV_IRQHandler,"ax",%progbits
- 332              		.align	2
- 333              		.global	I2C1_EV_IRQHandler
- 334              		.thumb
- 335              		.thumb_func
- 337              	I2C1_EV_IRQHandler:
- 338              	.LFB73:
-<<<<<<< HEAD
+ 339              		.loc 1 215 0
+ARM GAS  /tmp/ccBcR8ou.s 			page 17
+
+
+ 340 0006 FFF7FEFF 		bl	HAL_SYSTICK_IRQHandler
+ 341              	.LVL9:
  216:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN SysTick_IRQn 1 */
  217:./Src/stm32f1xx_it.c **** 
  218:./Src/stm32f1xx_it.c ****   /* USER CODE END SysTick_IRQn 1 */
-ARM GAS  /tmp/ccV25QEa.s 			page 17
-=======
- 214:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN SysTick_IRQn 1 */
- 215:./Src/stm32f1xx_it.c **** 
- 216:./Src/stm32f1xx_it.c ****   /* USER CODE END SysTick_IRQn 1 */
- 217:./Src/stm32f1xx_it.c **** }
- 218:./Src/stm32f1xx_it.c **** 
-ARM GAS  /tmp/ccFqqBor.s 			page 17
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
-
-
  219:./Src/stm32f1xx_it.c **** }
+ 342              		.loc 1 219 0
+ 343 000a 08BD     		pop	{r3, pc}
+ 344              		.cfi_endproc
+ 345              	.LFE74:
+ 347              		.section	.text.I2C1_EV_IRQHandler,"ax",%progbits
+ 348              		.align	1
+ 349              		.global	I2C1_EV_IRQHandler
+ 350              		.syntax unified
+ 351              		.thumb
+ 352              		.thumb_func
+ 353              		.fpu softvfp
+ 355              	I2C1_EV_IRQHandler:
+ 356              	.LFB75:
  220:./Src/stm32f1xx_it.c **** 
  221:./Src/stm32f1xx_it.c **** /******************************************************************************/
  222:./Src/stm32f1xx_it.c **** /* STM32F1xx Peripheral Interrupt Handlers                                    */
@@ -1087,76 +991,76 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  228:./Src/stm32f1xx_it.c **** extern I2C_HandleTypeDef hi2c2;
  229:./Src/stm32f1xx_it.c **** void I2C1_EV_IRQHandler(void)
  230:./Src/stm32f1xx_it.c **** {
- 339              		.loc 1 230 0
- 340              		.cfi_startproc
- 341              		@ args = 0, pretend = 0, frame = 0
- 342              		@ frame_needed = 0, uses_anonymous_args = 0
- 343 0000 08B5     		push	{r3, lr}
- 344              	.LCFI5:
- 345              		.cfi_def_cfa_offset 8
- 346              		.cfi_offset 3, -8
- 347              		.cfi_offset 14, -4
+ 357              		.loc 1 230 0
+ 358              		.cfi_startproc
+ 359              		@ args = 0, pretend = 0, frame = 0
+ 360              		@ frame_needed = 0, uses_anonymous_args = 0
+ 361 0000 08B5     		push	{r3, lr}
+ 362              	.LCFI5:
+ 363              		.cfi_def_cfa_offset 8
+ 364              		.cfi_offset 3, -8
+ 365              		.cfi_offset 14, -4
  231:./Src/stm32f1xx_it.c ****   HAL_I2C_EV_IRQHandler(&hi2c2);
- 348              		.loc 1 231 0
- 349 0002 0248     		ldr	r0, .L24
- 350 0004 FFF7FEFF 		bl	HAL_I2C_EV_IRQHandler
- 351              	.LVL10:
- 352 0008 08BD     		pop	{r3, pc}
- 353              	.L25:
- 354 000a 00BF     		.align	2
- 355              	.L24:
- 356 000c 00000000 		.word	hi2c2
- 357              		.cfi_endproc
- 358              	.LFE73:
- 360              		.section	.text.I2C1_ER_IRQHandler,"ax",%progbits
- 361              		.align	2
- 362              		.global	I2C1_ER_IRQHandler
- 363              		.thumb
- 364              		.thumb_func
- 366              	I2C1_ER_IRQHandler:
- 367              	.LFB74:
+ 366              		.loc 1 231 0
+ 367 0002 0248     		ldr	r0, .L24
+ 368 0004 FFF7FEFF 		bl	HAL_I2C_EV_IRQHandler
+ 369              	.LVL10:
  232:./Src/stm32f1xx_it.c **** }
+ 370              		.loc 1 232 0
+ 371 0008 08BD     		pop	{r3, pc}
+ 372              	.L25:
+ 373 000a 00BF     		.align	2
+ 374              	.L24:
+ 375 000c 00000000 		.word	hi2c2
+ 376              		.cfi_endproc
+ 377              	.LFE75:
+ 379              		.section	.text.I2C1_ER_IRQHandler,"ax",%progbits
+ 380              		.align	1
+ 381              		.global	I2C1_ER_IRQHandler
+ 382              		.syntax unified
+ARM GAS  /tmp/ccBcR8ou.s 			page 18
+
+
+ 383              		.thumb
+ 384              		.thumb_func
+ 385              		.fpu softvfp
+ 387              	I2C1_ER_IRQHandler:
+ 388              	.LFB76:
  233:./Src/stm32f1xx_it.c **** 
  234:./Src/stm32f1xx_it.c **** void I2C1_ER_IRQHandler(void)
  235:./Src/stm32f1xx_it.c **** {
- 368              		.loc 1 235 0
- 369              		.cfi_startproc
- 370              		@ args = 0, pretend = 0, frame = 0
- 371              		@ frame_needed = 0, uses_anonymous_args = 0
- 372 0000 08B5     		push	{r3, lr}
- 373              	.LCFI6:
- 374              		.cfi_def_cfa_offset 8
- 375              		.cfi_offset 3, -8
- 376              		.cfi_offset 14, -4
+ 389              		.loc 1 235 0
+ 390              		.cfi_startproc
+ 391              		@ args = 0, pretend = 0, frame = 0
+ 392              		@ frame_needed = 0, uses_anonymous_args = 0
+ 393 0000 08B5     		push	{r3, lr}
+ 394              	.LCFI6:
+ 395              		.cfi_def_cfa_offset 8
+ 396              		.cfi_offset 3, -8
+ 397              		.cfi_offset 14, -4
  236:./Src/stm32f1xx_it.c ****   HAL_I2C_ER_IRQHandler(&hi2c2);
- 377              		.loc 1 236 0
- 378 0002 0248     		ldr	r0, .L28
- 379 0004 FFF7FEFF 		bl	HAL_I2C_ER_IRQHandler
-<<<<<<< HEAD
-ARM GAS  /tmp/ccV25QEa.s 			page 18
-=======
- 380              	.LVL11:
- 381 0008 08BD     		pop	{r3, pc}
-ARM GAS  /tmp/ccFqqBor.s 			page 18
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
-
-
- 380              	.LVL11:
- 381 0008 08BD     		pop	{r3, pc}
- 382              	.L29:
- 383 000a 00BF     		.align	2
- 384              	.L28:
- 385 000c 00000000 		.word	hi2c2
- 386              		.cfi_endproc
- 387              	.LFE74:
- 389              		.section	.text.DMA1_Channel4_IRQHandler,"ax",%progbits
- 390              		.align	2
- 391              		.global	DMA1_Channel4_IRQHandler
- 392              		.thumb
- 393              		.thumb_func
- 395              	DMA1_Channel4_IRQHandler:
- 396              	.LFB75:
+ 398              		.loc 1 236 0
+ 399 0002 0248     		ldr	r0, .L28
+ 400 0004 FFF7FEFF 		bl	HAL_I2C_ER_IRQHandler
+ 401              	.LVL11:
  237:./Src/stm32f1xx_it.c **** }
+ 402              		.loc 1 237 0
+ 403 0008 08BD     		pop	{r3, pc}
+ 404              	.L29:
+ 405 000a 00BF     		.align	2
+ 406              	.L28:
+ 407 000c 00000000 		.word	hi2c2
+ 408              		.cfi_endproc
+ 409              	.LFE76:
+ 411              		.section	.text.DMA1_Channel4_IRQHandler,"ax",%progbits
+ 412              		.align	1
+ 413              		.global	DMA1_Channel4_IRQHandler
+ 414              		.syntax unified
+ 415              		.thumb
+ 416              		.thumb_func
+ 417              		.fpu softvfp
+ 419              	DMA1_Channel4_IRQHandler:
+ 420              	.LFB77:
  238:./Src/stm32f1xx_it.c **** 
  239:./Src/stm32f1xx_it.c **** 
  240:./Src/stm32f1xx_it.c **** /**
@@ -1164,204 +1068,185 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  242:./Src/stm32f1xx_it.c **** */
  243:./Src/stm32f1xx_it.c **** void DMA1_Channel4_IRQHandler(void)
  244:./Src/stm32f1xx_it.c **** {
- 397              		.loc 1 244 0
- 398              		.cfi_startproc
- 399              		@ args = 0, pretend = 0, frame = 0
- 400              		@ frame_needed = 0, uses_anonymous_args = 0
- 401 0000 08B5     		push	{r3, lr}
- 402              	.LCFI7:
- 403              		.cfi_def_cfa_offset 8
- 404              		.cfi_offset 3, -8
- 405              		.cfi_offset 14, -4
+ 421              		.loc 1 244 0
+ 422              		.cfi_startproc
+ 423              		@ args = 0, pretend = 0, frame = 0
+ 424              		@ frame_needed = 0, uses_anonymous_args = 0
+ 425 0000 08B5     		push	{r3, lr}
+ 426              	.LCFI7:
+ 427              		.cfi_def_cfa_offset 8
+ 428              		.cfi_offset 3, -8
+ 429              		.cfi_offset 14, -4
  245:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DMA1_Channel4_IRQn 0 */
+ARM GAS  /tmp/ccBcR8ou.s 			page 19
+
+
  246:./Src/stm32f1xx_it.c **** 
  247:./Src/stm32f1xx_it.c ****   /* USER CODE END DMA1_Channel4_IRQn 0 */
  248:./Src/stm32f1xx_it.c ****   HAL_DMA_IRQHandler(&hdma_i2c2_tx);
- 406              		.loc 1 248 0
- 407 0002 0248     		ldr	r0, .L32
- 408 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
- 409              	.LVL12:
- 410 0008 08BD     		pop	{r3, pc}
- 411              	.L33:
- 412 000a 00BF     		.align	2
- 413              	.L32:
- 414 000c 00000000 		.word	hdma_i2c2_tx
- 415              		.cfi_endproc
- 416              	.LFE75:
- 418              		.section	.text.DMA1_Channel5_IRQHandler,"ax",%progbits
- 419              		.align	2
- 420              		.global	DMA1_Channel5_IRQHandler
- 421              		.thumb
- 422              		.thumb_func
- 424              	DMA1_Channel5_IRQHandler:
- 425              	.LFB76:
-<<<<<<< HEAD
+ 430              		.loc 1 248 0
+ 431 0002 0248     		ldr	r0, .L32
+ 432 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
+ 433              	.LVL12:
  249:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DMA1_Channel4_IRQn 1 */
  250:./Src/stm32f1xx_it.c **** 
  251:./Src/stm32f1xx_it.c ****   /* USER CODE END DMA1_Channel4_IRQn 1 */
-ARM GAS  /tmp/ccV25QEa.s 			page 19
-=======
- 248:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DMA1_Channel6_IRQn 1 */
- 249:./Src/stm32f1xx_it.c **** 
- 250:./Src/stm32f1xx_it.c ****   /* USER CODE END DMA1_Channel6_IRQn 1 */
- 251:./Src/stm32f1xx_it.c **** }
-ARM GAS  /tmp/ccFqqBor.s 			page 19
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
-
-
  252:./Src/stm32f1xx_it.c **** }
+ 434              		.loc 1 252 0
+ 435 0008 08BD     		pop	{r3, pc}
+ 436              	.L33:
+ 437 000a 00BF     		.align	2
+ 438              	.L32:
+ 439 000c 00000000 		.word	hdma_i2c2_tx
+ 440              		.cfi_endproc
+ 441              	.LFE77:
+ 443              		.section	.text.DMA1_Channel5_IRQHandler,"ax",%progbits
+ 444              		.align	1
+ 445              		.global	DMA1_Channel5_IRQHandler
+ 446              		.syntax unified
+ 447              		.thumb
+ 448              		.thumb_func
+ 449              		.fpu softvfp
+ 451              	DMA1_Channel5_IRQHandler:
+ 452              	.LFB78:
  253:./Src/stm32f1xx_it.c **** 
  254:./Src/stm32f1xx_it.c **** /**
  255:./Src/stm32f1xx_it.c **** * @brief This function handles DMA1 channel5 global interrupt.
  256:./Src/stm32f1xx_it.c **** */
  257:./Src/stm32f1xx_it.c **** void DMA1_Channel5_IRQHandler(void)
  258:./Src/stm32f1xx_it.c **** {
- 426              		.loc 1 258 0
- 427              		.cfi_startproc
- 428              		@ args = 0, pretend = 0, frame = 0
- 429              		@ frame_needed = 0, uses_anonymous_args = 0
- 430 0000 08B5     		push	{r3, lr}
- 431              	.LCFI8:
- 432              		.cfi_def_cfa_offset 8
- 433              		.cfi_offset 3, -8
- 434              		.cfi_offset 14, -4
+ 453              		.loc 1 258 0
+ 454              		.cfi_startproc
+ 455              		@ args = 0, pretend = 0, frame = 0
+ 456              		@ frame_needed = 0, uses_anonymous_args = 0
+ 457 0000 08B5     		push	{r3, lr}
+ 458              	.LCFI8:
+ 459              		.cfi_def_cfa_offset 8
+ 460              		.cfi_offset 3, -8
+ 461              		.cfi_offset 14, -4
  259:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DMA1_Channel5_IRQn 0 */
  260:./Src/stm32f1xx_it.c **** 
  261:./Src/stm32f1xx_it.c ****   /* USER CODE END DMA1_Channel5_IRQn 0 */
  262:./Src/stm32f1xx_it.c ****   HAL_DMA_IRQHandler(&hdma_i2c2_rx);
- 435              		.loc 1 262 0
- 436 0002 0248     		ldr	r0, .L36
- 437 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
- 438              	.LVL13:
- 439 0008 08BD     		pop	{r3, pc}
- 440              	.L37:
- 441 000a 00BF     		.align	2
- 442              	.L36:
- 443 000c 00000000 		.word	hdma_i2c2_rx
- 444              		.cfi_endproc
- 445              	.LFE76:
- 447              		.section	.text.DMA1_Channel6_IRQHandler,"ax",%progbits
- 448              		.align	2
- 449              		.global	DMA1_Channel6_IRQHandler
- 450              		.thumb
- 451              		.thumb_func
- 453              	DMA1_Channel6_IRQHandler:
- 454              	.LFB77:
+ 462              		.loc 1 262 0
+ 463 0002 0248     		ldr	r0, .L36
+ 464 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
+ 465              	.LVL13:
  263:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DMA1_Channel5_IRQn 1 */
  264:./Src/stm32f1xx_it.c **** 
  265:./Src/stm32f1xx_it.c ****   /* USER CODE END DMA1_Channel5_IRQn 1 */
  266:./Src/stm32f1xx_it.c **** }
+ 466              		.loc 1 266 0
+ 467 0008 08BD     		pop	{r3, pc}
+ARM GAS  /tmp/ccBcR8ou.s 			page 20
+
+
+ 468              	.L37:
+ 469 000a 00BF     		.align	2
+ 470              	.L36:
+ 471 000c 00000000 		.word	hdma_i2c2_rx
+ 472              		.cfi_endproc
+ 473              	.LFE78:
+ 475              		.section	.text.DMA1_Channel6_IRQHandler,"ax",%progbits
+ 476              		.align	1
+ 477              		.global	DMA1_Channel6_IRQHandler
+ 478              		.syntax unified
+ 479              		.thumb
+ 480              		.thumb_func
+ 481              		.fpu softvfp
+ 483              	DMA1_Channel6_IRQHandler:
+ 484              	.LFB79:
  267:./Src/stm32f1xx_it.c **** 
  268:./Src/stm32f1xx_it.c **** /**
  269:./Src/stm32f1xx_it.c **** * @brief This function handles DMA1 channel6 global interrupt.
  270:./Src/stm32f1xx_it.c **** */
  271:./Src/stm32f1xx_it.c **** void DMA1_Channel6_IRQHandler(void)
  272:./Src/stm32f1xx_it.c **** {
- 455              		.loc 1 272 0
- 456              		.cfi_startproc
- 457              		@ args = 0, pretend = 0, frame = 0
- 458              		@ frame_needed = 0, uses_anonymous_args = 0
- 459 0000 08B5     		push	{r3, lr}
- 460              	.LCFI9:
- 461              		.cfi_def_cfa_offset 8
- 462              		.cfi_offset 3, -8
-<<<<<<< HEAD
- 463              		.cfi_offset 14, -4
-ARM GAS  /tmp/ccV25QEa.s 			page 20
-=======
-ARM GAS  /tmp/ccFqqBor.s 			page 20
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
-
-
+ 485              		.loc 1 272 0
+ 486              		.cfi_startproc
+ 487              		@ args = 0, pretend = 0, frame = 0
+ 488              		@ frame_needed = 0, uses_anonymous_args = 0
+ 489 0000 08B5     		push	{r3, lr}
+ 490              	.LCFI9:
+ 491              		.cfi_def_cfa_offset 8
+ 492              		.cfi_offset 3, -8
+ 493              		.cfi_offset 14, -4
  273:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DMA1_Channel6_IRQn 0 */
  274:./Src/stm32f1xx_it.c **** 
  275:./Src/stm32f1xx_it.c ****   /* USER CODE END DMA1_Channel6_IRQn 0 */
  276:./Src/stm32f1xx_it.c ****   HAL_DMA_IRQHandler(&hdma_usart2_rx);
- 464              		.loc 1 276 0
- 465 0002 0248     		ldr	r0, .L40
- 466 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
- 467              	.LVL14:
- 468 0008 08BD     		pop	{r3, pc}
- 469              	.L41:
- 470 000a 00BF     		.align	2
- 471              	.L40:
- 472 000c 00000000 		.word	hdma_usart2_rx
- 473              		.cfi_endproc
- 474              	.LFE77:
- 476              		.section	.text.DMA1_Channel7_IRQHandler,"ax",%progbits
- 477              		.align	2
- 478              		.global	DMA1_Channel7_IRQHandler
- 479              		.thumb
- 480              		.thumb_func
- 482              	DMA1_Channel7_IRQHandler:
- 483              	.LFB78:
+ 494              		.loc 1 276 0
+ 495 0002 0248     		ldr	r0, .L40
+ 496 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
+ 497              	.LVL14:
  277:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DMA1_Channel6_IRQn 1 */
  278:./Src/stm32f1xx_it.c **** 
  279:./Src/stm32f1xx_it.c ****   /* USER CODE END DMA1_Channel6_IRQn 1 */
  280:./Src/stm32f1xx_it.c **** }
+ 498              		.loc 1 280 0
+ 499 0008 08BD     		pop	{r3, pc}
+ 500              	.L41:
+ 501 000a 00BF     		.align	2
+ 502              	.L40:
+ 503 000c 00000000 		.word	hdma_usart2_rx
+ 504              		.cfi_endproc
+ 505              	.LFE79:
+ 507              		.section	.text.DMA1_Channel7_IRQHandler,"ax",%progbits
+ 508              		.align	1
+ 509              		.global	DMA1_Channel7_IRQHandler
+ 510              		.syntax unified
+ 511              		.thumb
+ 512              		.thumb_func
+ 513              		.fpu softvfp
+ARM GAS  /tmp/ccBcR8ou.s 			page 21
+
+
+ 515              	DMA1_Channel7_IRQHandler:
+ 516              	.LFB80:
  281:./Src/stm32f1xx_it.c **** 
  282:./Src/stm32f1xx_it.c **** /**
  283:./Src/stm32f1xx_it.c **** * @brief This function handles DMA1 channel7 global interrupt.
  284:./Src/stm32f1xx_it.c **** */
  285:./Src/stm32f1xx_it.c **** void DMA1_Channel7_IRQHandler(void)
  286:./Src/stm32f1xx_it.c **** {
- 484              		.loc 1 286 0
- 485              		.cfi_startproc
- 486              		@ args = 0, pretend = 0, frame = 0
- 487              		@ frame_needed = 0, uses_anonymous_args = 0
- 488 0000 08B5     		push	{r3, lr}
- 489              	.LCFI10:
- 490              		.cfi_def_cfa_offset 8
- 491              		.cfi_offset 3, -8
- 492              		.cfi_offset 14, -4
-<<<<<<< HEAD
+ 517              		.loc 1 286 0
+ 518              		.cfi_startproc
+ 519              		@ args = 0, pretend = 0, frame = 0
+ 520              		@ frame_needed = 0, uses_anonymous_args = 0
+ 521 0000 08B5     		push	{r3, lr}
+ 522              	.LCFI10:
+ 523              		.cfi_def_cfa_offset 8
+ 524              		.cfi_offset 3, -8
+ 525              		.cfi_offset 14, -4
  287:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DMA1_Channel7_IRQn 0 */
  288:./Src/stm32f1xx_it.c **** 
  289:./Src/stm32f1xx_it.c ****   /* USER CODE END DMA1_Channel7_IRQn 0 */
  290:./Src/stm32f1xx_it.c ****   HAL_DMA_IRQHandler(&hdma_usart2_tx);
- 493              		.loc 1 290 0
- 494 0002 0248     		ldr	r0, .L44
- 495 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
- 496              	.LVL15:
- 497 0008 08BD     		pop	{r3, pc}
- 498              	.L45:
- 499 000a 00BF     		.align	2
- 500              	.L44:
- 501 000c 00000000 		.word	hdma_usart2_tx
- 502              		.cfi_endproc
- 503              	.LFE78:
- 505              		.section	.text.I2C2_ER_IRQHandler,"ax",%progbits
-ARM GAS  /tmp/ccV25QEa.s 			page 21
-=======
- 288:./Src/stm32f1xx_it.c ****   if((__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_10) != RESET)||
- 493              		.loc 1 288 0
- 494 0002 0E4B     		ldr	r3, .L46
- 495 0004 5B69     		ldr	r3, [r3, #20]
- 496 0006 13F4806F 		tst	r3, #1024
- 497 000a 09D1     		bne	.L43
- 289:./Src/stm32f1xx_it.c ****     (__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_11) != RESET)||
- 498              		.loc 1 289 0 discriminator 1
- 499 000c 0B4B     		ldr	r3, .L46
- 500 000e 5B69     		ldr	r3, [r3, #20]
- 288:./Src/stm32f1xx_it.c ****   if((__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_10) != RESET)||
- 501              		.loc 1 288 0 discriminator 1
- 502 0010 13F4006F 		tst	r3, #2048
- 503 0014 04D1     		bne	.L43
- 290:./Src/stm32f1xx_it.c ****     (__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_12) != RESET))
-ARM GAS  /tmp/ccFqqBor.s 			page 21
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
-
-
- 506              		.align	2
- 507              		.global	I2C2_ER_IRQHandler
- 508              		.thumb
- 509              		.thumb_func
- 511              	I2C2_ER_IRQHandler:
- 512              	.LFB79:
+ 526              		.loc 1 290 0
+ 527 0002 0248     		ldr	r0, .L44
+ 528 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
+ 529              	.LVL15:
  291:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN DMA1_Channel7_IRQn 1 */
  292:./Src/stm32f1xx_it.c **** 
  293:./Src/stm32f1xx_it.c ****   /* USER CODE END DMA1_Channel7_IRQn 1 */
  294:./Src/stm32f1xx_it.c **** }
+ 530              		.loc 1 294 0
+ 531 0008 08BD     		pop	{r3, pc}
+ 532              	.L45:
+ 533 000a 00BF     		.align	2
+ 534              	.L44:
+ 535 000c 00000000 		.word	hdma_usart2_tx
+ 536              		.cfi_endproc
+ 537              	.LFE80:
+ 539              		.section	.text.I2C2_ER_IRQHandler,"ax",%progbits
+ 540              		.align	1
+ 541              		.global	I2C2_ER_IRQHandler
+ 542              		.syntax unified
+ 543              		.thumb
+ 544              		.thumb_func
+ 545              		.fpu softvfp
+ 547              	I2C2_ER_IRQHandler:
+ 548              	.LFB81:
  295:./Src/stm32f1xx_it.c **** 
  296:./Src/stm32f1xx_it.c **** 
  297:./Src/stm32f1xx_it.c **** 
@@ -1370,630 +1255,419 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  300:./Src/stm32f1xx_it.c **** */
  301:./Src/stm32f1xx_it.c **** void I2C2_ER_IRQHandler(void)
  302:./Src/stm32f1xx_it.c **** {
- 513              		.loc 1 302 0
- 514              		.cfi_startproc
- 515              		@ args = 0, pretend = 0, frame = 0
- 516              		@ frame_needed = 0, uses_anonymous_args = 0
- 517 0000 08B5     		push	{r3, lr}
- 518              	.LCFI11:
- 519              		.cfi_def_cfa_offset 8
- 520              		.cfi_offset 3, -8
- 521              		.cfi_offset 14, -4
+ 549              		.loc 1 302 0
+ 550              		.cfi_startproc
+ 551              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/ccBcR8ou.s 			page 22
+
+
+ 552              		@ frame_needed = 0, uses_anonymous_args = 0
+ 553 0000 08B5     		push	{r3, lr}
+ 554              	.LCFI11:
+ 555              		.cfi_def_cfa_offset 8
+ 556              		.cfi_offset 3, -8
+ 557              		.cfi_offset 14, -4
  303:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_ER_IRQn 0 */
  304:./Src/stm32f1xx_it.c **** 
-<<<<<<< HEAD
  305:./Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_ER_IRQn 0 */
  306:./Src/stm32f1xx_it.c ****   HAL_I2C_ER_IRQHandler(&hi2c2);
- 522              		.loc 1 306 0
- 523 0002 0248     		ldr	r0, .L48
- 524 0004 FFF7FEFF 		bl	HAL_I2C_ER_IRQHandler
- 525              	.LVL16:
- 526 0008 08BD     		pop	{r3, pc}
- 527              	.L49:
- 528 000a 00BF     		.align	2
- 529              	.L48:
- 530 000c 00000000 		.word	hi2c2
- 531              		.cfi_endproc
- 532              	.LFE79:
- 534              		.section	.text.EXTI15_10_IRQHandler,"ax",%progbits
- 535              		.align	2
- 536              		.global	EXTI15_10_IRQHandler
- 537              		.thumb
- 538              		.thumb_func
- 540              	EXTI15_10_IRQHandler:
- 541              	.LFB80:
+ 558              		.loc 1 306 0
+ 559 0002 0248     		ldr	r0, .L48
+ 560 0004 FFF7FEFF 		bl	HAL_I2C_ER_IRQHandler
+ 561              	.LVL16:
  307:./Src/stm32f1xx_it.c ****   /* USER CODE BEGIN I2C2_ER_IRQn 1 */
  308:./Src/stm32f1xx_it.c **** 
  309:./Src/stm32f1xx_it.c ****   /* USER CODE END I2C2_ER_IRQn 1 */
  310:./Src/stm32f1xx_it.c **** }
+ 562              		.loc 1 310 0
+ 563 0008 08BD     		pop	{r3, pc}
+ 564              	.L49:
+ 565 000a 00BF     		.align	2
+ 566              	.L48:
+ 567 000c 00000000 		.word	hi2c2
+ 568              		.cfi_endproc
+ 569              	.LFE81:
+ 571              		.section	.text.EXTI15_10_IRQHandler,"ax",%progbits
+ 572              		.align	1
+ 573              		.global	EXTI15_10_IRQHandler
+ 574              		.syntax unified
+ 575              		.thumb
+ 576              		.thumb_func
+ 577              		.fpu softvfp
+ 579              	EXTI15_10_IRQHandler:
+ 580              	.LFB82:
  311:./Src/stm32f1xx_it.c **** 
  312:./Src/stm32f1xx_it.c **** /**
  313:./Src/stm32f1xx_it.c **** * @brief This function handles EXTI line[15:10] interrupts.
  314:./Src/stm32f1xx_it.c **** */
-ARM GAS  /tmp/ccV25QEa.s 			page 22
-
-
  315:./Src/stm32f1xx_it.c **** void EXTI15_10_IRQHandler(void)
  316:./Src/stm32f1xx_it.c **** {
- 542              		.loc 1 316 0
- 543              		.cfi_startproc
- 544              		@ args = 0, pretend = 0, frame = 0
- 545              		@ frame_needed = 0, uses_anonymous_args = 0
- 546 0000 08B5     		push	{r3, lr}
- 547              	.LCFI12:
- 548              		.cfi_def_cfa_offset 8
- 549              		.cfi_offset 3, -8
- 550              		.cfi_offset 14, -4
+ 581              		.loc 1 316 0
+ 582              		.cfi_startproc
+ 583              		@ args = 0, pretend = 0, frame = 0
+ 584              		@ frame_needed = 0, uses_anonymous_args = 0
+ 585 0000 08B5     		push	{r3, lr}
+ 586              	.LCFI12:
+ 587              		.cfi_def_cfa_offset 8
+ 588              		.cfi_offset 3, -8
+ 589              		.cfi_offset 14, -4
  317:./Src/stm32f1xx_it.c ****   if((__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_10) != RESET)||
- 551              		.loc 1 317 0
- 552 0002 0E4B     		ldr	r3, .L54
- 553 0004 5B69     		ldr	r3, [r3, #20]
- 554 0006 13F4806F 		tst	r3, #1024
- 555 000a 09D1     		bne	.L51
+ 590              		.loc 1 317 0
+ 591 0002 0E4B     		ldr	r3, .L54
+ 592 0004 5B69     		ldr	r3, [r3, #20]
+ 593 0006 13F4806F 		tst	r3, #1024
+ 594 000a 09D1     		bne	.L51
  318:./Src/stm32f1xx_it.c ****     (__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_11) != RESET)||
- 556              		.loc 1 318 0 discriminator 1
- 557 000c 0B4B     		ldr	r3, .L54
- 558 000e 5B69     		ldr	r3, [r3, #20]
+ARM GAS  /tmp/ccBcR8ou.s 			page 23
+
+
+ 595              		.loc 1 318 0 discriminator 1
+ 596 000c 0B4B     		ldr	r3, .L54
+ 597 000e 5B69     		ldr	r3, [r3, #20]
  317:./Src/stm32f1xx_it.c ****   if((__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_10) != RESET)||
- 559              		.loc 1 317 0 discriminator 1
- 560 0010 13F4006F 		tst	r3, #2048
- 561 0014 04D1     		bne	.L51
+ 598              		.loc 1 317 0 discriminator 1
+ 599 0010 13F4006F 		tst	r3, #2048
+ 600 0014 04D1     		bne	.L51
  319:./Src/stm32f1xx_it.c ****     (__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_12) != RESET))
- 562              		.loc 1 319 0
- 563 0016 094B     		ldr	r3, .L54
- 564 0018 5B69     		ldr	r3, [r3, #20]
+ 601              		.loc 1 319 0
+ 602 0016 094B     		ldr	r3, .L54
+ 603 0018 5B69     		ldr	r3, [r3, #20]
  318:./Src/stm32f1xx_it.c ****     (__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_11) != RESET)||
- 565              		.loc 1 318 0
- 566 001a 13F4805F 		tst	r3, #4096
- 567 001e 0BD0     		beq	.L50
- 568              	.L51:
+ 604              		.loc 1 318 0
+ 605 001a 13F4805F 		tst	r3, #4096
+ 606 001e 0BD0     		beq	.L50
+ 607              	.L51:
  320:./Src/stm32f1xx_it.c ****   {
  321:./Src/stm32f1xx_it.c **** 
  322:./Src/stm32f1xx_it.c ****     HALL_R_ISR_Callback();
- 569              		.loc 1 322 0
- 570 0020 FFF7FEFF 		bl	HALL_R_ISR_Callback
- 571              	.LVL17:
+ 608              		.loc 1 322 0
+ 609 0020 FFF7FEFF 		bl	HALL_R_ISR_Callback
+ 610              	.LVL17:
  323:./Src/stm32f1xx_it.c ****      
  324:./Src/stm32f1xx_it.c ****     __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_10);
- 572              		.loc 1 324 0
- 573 0024 054B     		ldr	r3, .L54
- 574 0026 4FF48062 		mov	r2, #1024
- 575 002a 5A61     		str	r2, [r3, #20]
+ 611              		.loc 1 324 0
+ 612 0024 054B     		ldr	r3, .L54
+ 613 0026 4FF48062 		mov	r2, #1024
+ 614 002a 5A61     		str	r2, [r3, #20]
  325:./Src/stm32f1xx_it.c ****     __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_11);
- 576              		.loc 1 325 0
- 577 002c 4FF40062 		mov	r2, #2048
- 578 0030 5A61     		str	r2, [r3, #20]
+ 615              		.loc 1 325 0
+ 616 002c 4FF40062 		mov	r2, #2048
+ 617 0030 5A61     		str	r2, [r3, #20]
  326:./Src/stm32f1xx_it.c ****     __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_12);
- 579              		.loc 1 326 0
- 580 0032 4FF48052 		mov	r2, #4096
- 581 0036 5A61     		str	r2, [r3, #20]
- 582              	.L50:
- 583 0038 08BD     		pop	{r3, pc}
- 584              	.L55:
-ARM GAS  /tmp/ccV25QEa.s 			page 23
-=======
- 305:./Src/stm32f1xx_it.c **** 
- 306:./Src/stm32f1xx_it.c **** /**
- 307:./Src/stm32f1xx_it.c **** * @brief This function handles EXTI line[9:5] interrupts.
- 308:./Src/stm32f1xx_it.c **** */
- 309:./Src/stm32f1xx_it.c **** void EXTI9_5_IRQHandler(void)
- 310:./Src/stm32f1xx_it.c **** {
- 541              		.loc 1 310 0
-ARM GAS  /tmp/ccFqqBor.s 			page 22
-
-
- 542              		.cfi_startproc
- 543              		@ args = 0, pretend = 0, frame = 0
- 544              		@ frame_needed = 0, uses_anonymous_args = 0
- 545 0000 08B5     		push	{r3, lr}
- 546              	.LCFI11:
- 547              		.cfi_def_cfa_offset 8
- 548              		.cfi_offset 3, -8
- 549              		.cfi_offset 14, -4
- 311:./Src/stm32f1xx_it.c ****   if((__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_5) != RESET)||
- 550              		.loc 1 311 0
- 551 0002 0C4B     		ldr	r3, .L52
- 552 0004 5B69     		ldr	r3, [r3, #20]
- 553 0006 13F0200F 		tst	r3, #32
- 554 000a 09D1     		bne	.L49
- 312:./Src/stm32f1xx_it.c ****     (__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_6) != RESET)||
- 555              		.loc 1 312 0 discriminator 1
- 556 000c 094B     		ldr	r3, .L52
- 557 000e 5B69     		ldr	r3, [r3, #20]
- 311:./Src/stm32f1xx_it.c ****   if((__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_5) != RESET)||
- 558              		.loc 1 311 0 discriminator 1
- 559 0010 13F0400F 		tst	r3, #64
- 560 0014 04D1     		bne	.L49
- 313:./Src/stm32f1xx_it.c ****     (__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_7) != RESET))
- 561              		.loc 1 313 0
- 562 0016 074B     		ldr	r3, .L52
- 563 0018 5B69     		ldr	r3, [r3, #20]
- 312:./Src/stm32f1xx_it.c ****     (__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_6) != RESET)||
- 564              		.loc 1 312 0
- 565 001a 13F0800F 		tst	r3, #128
- 566 001e 08D0     		beq	.L48
- 567              	.L49:
- 314:./Src/stm32f1xx_it.c ****   {
- 315:./Src/stm32f1xx_it.c **** 
- 316:./Src/stm32f1xx_it.c ****     HALL_L_ISR_Callback();
- 568              		.loc 1 316 0
- 569 0020 FFF7FEFF 		bl	HALL_L_ISR_Callback
- 570              	.LVL16:
- 317:./Src/stm32f1xx_it.c **** 
- 318:./Src/stm32f1xx_it.c ****     __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_5);
- 571              		.loc 1 318 0
- 572 0024 034B     		ldr	r3, .L52
- 573 0026 2022     		movs	r2, #32
- 574 0028 5A61     		str	r2, [r3, #20]
- 319:./Src/stm32f1xx_it.c ****     __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_6);
- 575              		.loc 1 319 0
- 576 002a 4022     		movs	r2, #64
- 577 002c 5A61     		str	r2, [r3, #20]
- 320:./Src/stm32f1xx_it.c ****     __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_7);
- 578              		.loc 1 320 0
- 579 002e 8022     		movs	r2, #128
- 580 0030 5A61     		str	r2, [r3, #20]
- 581              	.L48:
- 582 0032 08BD     		pop	{r3, pc}
- 583              	.L53:
- 584              		.align	2
- 585              	.L52:
- 586 0034 00040140 		.word	1073808384
-ARM GAS  /tmp/ccFqqBor.s 			page 23
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
-
-
- 585 003a 00BF     		.align	2
- 586              	.L54:
- 587 003c 00040140 		.word	1073808384
- 588              		.cfi_endproc
- 589              	.LFE80:
- 591              		.section	.text.EXTI9_5_IRQHandler,"ax",%progbits
- 592              		.align	2
- 593              		.global	EXTI9_5_IRQHandler
- 594              		.thumb
- 595              		.thumb_func
- 597              	EXTI9_5_IRQHandler:
- 598              	.LFB81:
+ 618              		.loc 1 326 0
+ 619 0032 4FF48052 		mov	r2, #4096
+ 620 0036 5A61     		str	r2, [r3, #20]
+ 621              	.L50:
  327:./Src/stm32f1xx_it.c ****   }  
  328:./Src/stm32f1xx_it.c **** }
+ 622              		.loc 1 328 0
+ 623 0038 08BD     		pop	{r3, pc}
+ 624              	.L55:
+ 625 003a 00BF     		.align	2
+ 626              	.L54:
+ 627 003c 00040140 		.word	1073808384
+ 628              		.cfi_endproc
+ 629              	.LFE82:
+ 631              		.section	.text.EXTI9_5_IRQHandler,"ax",%progbits
+ 632              		.align	1
+ 633              		.global	EXTI9_5_IRQHandler
+ 634              		.syntax unified
+ 635              		.thumb
+ 636              		.thumb_func
+ 637              		.fpu softvfp
+ 639              	EXTI9_5_IRQHandler:
+ 640              	.LFB83:
  329:./Src/stm32f1xx_it.c **** 
+ARM GAS  /tmp/ccBcR8ou.s 			page 24
+
+
  330:./Src/stm32f1xx_it.c **** /**
  331:./Src/stm32f1xx_it.c **** * @brief This function handles TIM1 capture compare interrupt.
  332:./Src/stm32f1xx_it.c **** */
  333:./Src/stm32f1xx_it.c **** 
  334:./Src/stm32f1xx_it.c **** 
-<<<<<<< HEAD
  335:./Src/stm32f1xx_it.c **** /**
  336:./Src/stm32f1xx_it.c **** * @brief This function handles EXTI line[9:5] interrupts.
  337:./Src/stm32f1xx_it.c **** */
  338:./Src/stm32f1xx_it.c **** void EXTI9_5_IRQHandler(void)
  339:./Src/stm32f1xx_it.c **** {
- 599              		.loc 1 339 0
- 600              		.cfi_startproc
- 601              		@ args = 0, pretend = 0, frame = 0
- 602              		@ frame_needed = 0, uses_anonymous_args = 0
- 603 0000 08B5     		push	{r3, lr}
- 604              	.LCFI13:
- 605              		.cfi_def_cfa_offset 8
- 606              		.cfi_offset 3, -8
- 607              		.cfi_offset 14, -4
+ 641              		.loc 1 339 0
+ 642              		.cfi_startproc
+ 643              		@ args = 0, pretend = 0, frame = 0
+ 644              		@ frame_needed = 0, uses_anonymous_args = 0
+ 645 0000 08B5     		push	{r3, lr}
+ 646              	.LCFI13:
+ 647              		.cfi_def_cfa_offset 8
+ 648              		.cfi_offset 3, -8
+ 649              		.cfi_offset 14, -4
  340:./Src/stm32f1xx_it.c ****   if((__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_5) != RESET)||
- 608              		.loc 1 340 0
- 609 0002 0C4B     		ldr	r3, .L60
- 610 0004 5B69     		ldr	r3, [r3, #20]
- 611 0006 13F0200F 		tst	r3, #32
- 612 000a 09D1     		bne	.L57
+ 650              		.loc 1 340 0
+ 651 0002 0C4B     		ldr	r3, .L60
+ 652 0004 5B69     		ldr	r3, [r3, #20]
+ 653 0006 13F0200F 		tst	r3, #32
+ 654 000a 09D1     		bne	.L57
  341:./Src/stm32f1xx_it.c ****     (__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_6) != RESET)||
- 613              		.loc 1 341 0 discriminator 1
- 614 000c 094B     		ldr	r3, .L60
- 615 000e 5B69     		ldr	r3, [r3, #20]
+ 655              		.loc 1 341 0 discriminator 1
+ 656 000c 094B     		ldr	r3, .L60
+ 657 000e 5B69     		ldr	r3, [r3, #20]
  340:./Src/stm32f1xx_it.c ****   if((__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_5) != RESET)||
- 616              		.loc 1 340 0 discriminator 1
- 617 0010 13F0400F 		tst	r3, #64
- 618 0014 04D1     		bne	.L57
+ 658              		.loc 1 340 0 discriminator 1
+ 659 0010 13F0400F 		tst	r3, #64
+ 660 0014 04D1     		bne	.L57
  342:./Src/stm32f1xx_it.c ****     (__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_7) != RESET))
- 619              		.loc 1 342 0
- 620 0016 074B     		ldr	r3, .L60
- 621 0018 5B69     		ldr	r3, [r3, #20]
+ 661              		.loc 1 342 0
+ 662 0016 074B     		ldr	r3, .L60
+ 663 0018 5B69     		ldr	r3, [r3, #20]
  341:./Src/stm32f1xx_it.c ****     (__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_6) != RESET)||
- 622              		.loc 1 341 0
- 623 001a 13F0800F 		tst	r3, #128
- 624 001e 08D0     		beq	.L56
- 625              	.L57:
-ARM GAS  /tmp/ccV25QEa.s 			page 24
-
-
+ 664              		.loc 1 341 0
+ 665 001a 13F0800F 		tst	r3, #128
+ 666 001e 08D0     		beq	.L56
+ 667              	.L57:
  343:./Src/stm32f1xx_it.c ****   {
  344:./Src/stm32f1xx_it.c **** 
  345:./Src/stm32f1xx_it.c ****     HALL_L_ISR_Callback();
- 626              		.loc 1 345 0
- 627 0020 FFF7FEFF 		bl	HALL_L_ISR_Callback
- 628              	.LVL18:
+ 668              		.loc 1 345 0
+ 669 0020 FFF7FEFF 		bl	HALL_L_ISR_Callback
+ 670              	.LVL18:
  346:./Src/stm32f1xx_it.c ****      
  347:./Src/stm32f1xx_it.c ****     __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_5);
- 629              		.loc 1 347 0
- 630 0024 034B     		ldr	r3, .L60
- 631 0026 2022     		movs	r2, #32
- 632 0028 5A61     		str	r2, [r3, #20]
+ 671              		.loc 1 347 0
+ 672 0024 034B     		ldr	r3, .L60
+ 673 0026 2022     		movs	r2, #32
+ 674 0028 5A61     		str	r2, [r3, #20]
  348:./Src/stm32f1xx_it.c ****     __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_6);
- 633              		.loc 1 348 0
- 634 002a 4022     		movs	r2, #64
- 635 002c 5A61     		str	r2, [r3, #20]
+ 675              		.loc 1 348 0
+ 676 002a 4022     		movs	r2, #64
+ARM GAS  /tmp/ccBcR8ou.s 			page 25
+
+
+ 677 002c 5A61     		str	r2, [r3, #20]
  349:./Src/stm32f1xx_it.c ****     __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_7);
- 636              		.loc 1 349 0
- 637 002e 8022     		movs	r2, #128
- 638 0030 5A61     		str	r2, [r3, #20]
- 639              	.L56:
- 640 0032 08BD     		pop	{r3, pc}
- 641              	.L61:
- 642              		.align	2
- 643              	.L60:
- 644 0034 00040140 		.word	1073808384
- 645              		.cfi_endproc
- 646              	.LFE81:
- 648              		.section	.text.TIM1_CC_IRQHandler,"ax",%progbits
- 649              		.align	2
- 650              		.global	TIM1_CC_IRQHandler
- 651              		.thumb
- 652              		.thumb_func
- 654              	TIM1_CC_IRQHandler:
- 655              	.LFB82:
+ 678              		.loc 1 349 0
+ 679 002e 8022     		movs	r2, #128
+ 680 0030 5A61     		str	r2, [r3, #20]
+ 681              	.L56:
  350:./Src/stm32f1xx_it.c ****   }  
  351:./Src/stm32f1xx_it.c **** }
+ 682              		.loc 1 351 0
+ 683 0032 08BD     		pop	{r3, pc}
+ 684              	.L61:
+ 685              		.align	2
+ 686              	.L60:
+ 687 0034 00040140 		.word	1073808384
+ 688              		.cfi_endproc
+ 689              	.LFE83:
+ 691              		.section	.text.TIM1_CC_IRQHandler,"ax",%progbits
+ 692              		.align	1
+ 693              		.global	TIM1_CC_IRQHandler
+ 694              		.syntax unified
+ 695              		.thumb
+ 696              		.thumb_func
+ 697              		.fpu softvfp
+ 699              	TIM1_CC_IRQHandler:
+ 700              	.LFB84:
  352:./Src/stm32f1xx_it.c **** 
  353:./Src/stm32f1xx_it.c **** /**
  354:./Src/stm32f1xx_it.c **** * @brief This function handles TIM8 capture compare interrupt.
  355:./Src/stm32f1xx_it.c **** */
  356:./Src/stm32f1xx_it.c **** void TIM1_CC_IRQHandler(void)
  357:./Src/stm32f1xx_it.c **** {
- 656              		.loc 1 357 0
- 657              		.cfi_startproc
- 658              		@ args = 0, pretend = 0, frame = 0
- 659              		@ frame_needed = 0, uses_anonymous_args = 0
- 660 0000 08B5     		push	{r3, lr}
- 661              	.LCFI14:
- 662              		.cfi_def_cfa_offset 8
- 663              		.cfi_offset 3, -8
- 664              		.cfi_offset 14, -4
+ 701              		.loc 1 357 0
+ 702              		.cfi_startproc
+ 703              		@ args = 0, pretend = 0, frame = 0
+ 704              		@ frame_needed = 0, uses_anonymous_args = 0
+ 705 0000 08B5     		push	{r3, lr}
+ 706              	.LCFI14:
+ 707              		.cfi_def_cfa_offset 8
+ 708              		.cfi_offset 3, -8
+ 709              		.cfi_offset 14, -4
  358:./Src/stm32f1xx_it.c ****   //DebugPin4_ON();
  359:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&htim1, TIM_IT_CC1);
- 665              		.loc 1 359 0
- 666 0002 0A4B     		ldr	r3, .L64
- 667 0004 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/ccV25QEa.s 			page 25
-
-
- 668 0006 6FF00202 		mvn	r2, #2
- 669 000a 1A61     		str	r2, [r3, #16]
+ 710              		.loc 1 359 0
+ 711 0002 0A4B     		ldr	r3, .L64
+ 712 0004 1B68     		ldr	r3, [r3]
+ 713 0006 6FF00202 		mvn	r2, #2
+ 714 000a 1A61     		str	r2, [r3, #16]
  360:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&htim1, TIM_IT_CC2);
- 670              		.loc 1 360 0
- 671 000c 6FF00402 		mvn	r2, #4
- 672 0010 1A61     		str	r2, [r3, #16]
+ 715              		.loc 1 360 0
+ 716 000c 6FF00402 		mvn	r2, #4
+ 717 0010 1A61     		str	r2, [r3, #16]
  361:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&htim1, TIM_IT_CC3);
- 673              		.loc 1 361 0
- 674 0012 6FF00802 		mvn	r2, #8
- 675 0016 1A61     		str	r2, [r3, #16]
+ 718              		.loc 1 361 0
+ 719 0012 6FF00802 		mvn	r2, #8
+ 720 0016 1A61     		str	r2, [r3, #16]
  362:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&htim1, TIM_IT_CC4);
- 676              		.loc 1 362 0
- 677 0018 6FF01002 		mvn	r2, #16
- 678 001c 1A61     		str	r2, [r3, #16]
+ 721              		.loc 1 362 0
+ARM GAS  /tmp/ccBcR8ou.s 			page 26
+
+
+ 722 0018 6FF01002 		mvn	r2, #16
+ 723 001c 1A61     		str	r2, [r3, #16]
  363:./Src/stm32f1xx_it.c ****   
  364:./Src/stm32f1xx_it.c ****   PWM_R_ISR_Callback();  
- 679              		.loc 1 364 0
- 680 001e FFF7FEFF 		bl	PWM_R_ISR_Callback
- 681              	.LVL19:
+ 724              		.loc 1 364 0
+ 725 001e FFF7FEFF 		bl	PWM_R_ISR_Callback
+ 726              	.LVL19:
  365:./Src/stm32f1xx_it.c ****   HAL_ADC_Start(&hadc1);
- 682              		.loc 1 365 0
- 683 0022 0348     		ldr	r0, .L64+4
- 684 0024 FFF7FEFF 		bl	HAL_ADC_Start
- 685              	.LVL20:
- 686 0028 08BD     		pop	{r3, pc}
- 687              	.L65:
- 688 002a 00BF     		.align	2
- 689              	.L64:
- 690 002c 00000000 		.word	htim1
- 691 0030 00000000 		.word	hadc1
- 692              		.cfi_endproc
- 693              	.LFE82:
- 695              		.section	.text.TIM8_CC_IRQHandler,"ax",%progbits
- 696              		.align	2
- 697              		.global	TIM8_CC_IRQHandler
- 698              		.thumb
- 699              		.thumb_func
- 701              	TIM8_CC_IRQHandler:
- 702              	.LFB83:
+ 727              		.loc 1 365 0
+ 728 0022 0348     		ldr	r0, .L64+4
+ 729 0024 FFF7FEFF 		bl	HAL_ADC_Start
+ 730              	.LVL20:
  366:./Src/stm32f1xx_it.c ****   //DebugPin4_OFF();  
  367:./Src/stm32f1xx_it.c **** }
- 368:./Src/stm32f1xx_it.c **** void TIM8_CC_IRQHandler(void)
- 369:./Src/stm32f1xx_it.c **** {
- 703              		.loc 1 369 0
- 704              		.cfi_startproc
- 705              		@ args = 0, pretend = 0, frame = 0
- 706              		@ frame_needed = 0, uses_anonymous_args = 0
- 707 0000 08B5     		push	{r3, lr}
- 708              	.LCFI15:
- 709              		.cfi_def_cfa_offset 8
- 710              		.cfi_offset 3, -8
- 711              		.cfi_offset 14, -4
- 370:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&htim8, TIM_IT_CC1);
- 712              		.loc 1 370 0
- 713 0002 0A4B     		ldr	r3, .L68
- 714 0004 1B68     		ldr	r3, [r3]
- 715 0006 6FF00202 		mvn	r2, #2
-ARM GAS  /tmp/ccV25QEa.s 			page 26
-=======
- 335:./Src/stm32f1xx_it.c ****   PWM_R_ISR_Callback();
- 621              		.loc 1 335 0
- 622 001e FFF7FEFF 		bl	PWM_R_ISR_Callback
- 623              	.LVL17:
- 336:./Src/stm32f1xx_it.c ****   HAL_ADC_Start(&hadc1);
- 624              		.loc 1 336 0
- 625 0022 0348     		ldr	r0, .L56+4
- 626 0024 FFF7FEFF 		bl	HAL_ADC_Start
- 627              	.LVL18:
- 628 0028 08BD     		pop	{r3, pc}
- 629              	.L57:
-ARM GAS  /tmp/ccFqqBor.s 			page 24
-
-
- 630 002a 00BF     		.align	2
- 631              	.L56:
- 632 002c 00000000 		.word	htim1
- 633 0030 00000000 		.word	hadc1
- 634              		.cfi_endproc
- 635              	.LFE80:
- 637              		.section	.text.TIM8_CC_IRQHandler,"ax",%progbits
- 638              		.align	2
- 639              		.global	TIM8_CC_IRQHandler
- 640              		.thumb
- 641              		.thumb_func
- 643              	TIM8_CC_IRQHandler:
- 644              	.LFB81:
- 337:./Src/stm32f1xx_it.c ****   //DebugPin4_OFF();
- 338:./Src/stm32f1xx_it.c **** }
- 339:./Src/stm32f1xx_it.c **** void TIM8_CC_IRQHandler(void)
- 340:./Src/stm32f1xx_it.c **** {
- 645              		.loc 1 340 0
- 646              		.cfi_startproc
- 647              		@ args = 0, pretend = 0, frame = 0
- 648              		@ frame_needed = 0, uses_anonymous_args = 0
- 649 0000 08B5     		push	{r3, lr}
- 650              	.LCFI13:
- 651              		.cfi_def_cfa_offset 8
- 652              		.cfi_offset 3, -8
- 653              		.cfi_offset 14, -4
- 341:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&htim8, TIM_IT_CC1);
- 654              		.loc 1 341 0
- 655 0002 0A4B     		ldr	r3, .L60
- 656 0004 1B68     		ldr	r3, [r3]
- 657 0006 6FF00202 		mvn	r2, #2
- 658 000a 1A61     		str	r2, [r3, #16]
- 342:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&htim8, TIM_IT_CC2);
- 659              		.loc 1 342 0
- 660 000c 6FF00402 		mvn	r2, #4
- 661 0010 1A61     		str	r2, [r3, #16]
- 343:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&htim8, TIM_IT_CC3);
- 662              		.loc 1 343 0
- 663 0012 6FF00802 		mvn	r2, #8
- 664 0016 1A61     		str	r2, [r3, #16]
- 344:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&htim8, TIM_IT_CC4);
- 665              		.loc 1 344 0
- 666 0018 6FF01002 		mvn	r2, #16
- 667 001c 1A61     		str	r2, [r3, #16]
- 345:./Src/stm32f1xx_it.c **** 
- 346:./Src/stm32f1xx_it.c ****   PWM_L_ISR_Callback();
- 668              		.loc 1 346 0
- 669 001e FFF7FEFF 		bl	PWM_L_ISR_Callback
- 670              	.LVL19:
- 347:./Src/stm32f1xx_it.c ****   HAL_ADC_Start(&hadc3);
- 671              		.loc 1 347 0
- 672 0022 0348     		ldr	r0, .L60+4
- 673 0024 FFF7FEFF 		bl	HAL_ADC_Start
- 674              	.LVL20:
- 675 0028 08BD     		pop	{r3, pc}
- 676              	.L61:
- 677 002a 00BF     		.align	2
-ARM GAS  /tmp/ccFqqBor.s 			page 25
-
-
- 678              	.L60:
- 679 002c 00000000 		.word	htim8
- 680 0030 00000000 		.word	hadc3
- 681              		.cfi_endproc
- 682              	.LFE81:
- 684              		.section	.text.DMA1_Channel1_IRQHandler,"ax",%progbits
- 685              		.align	2
- 686              		.global	DMA1_Channel1_IRQHandler
- 687              		.thumb
- 688              		.thumb_func
- 690              	DMA1_Channel1_IRQHandler:
- 691              	.LFB82:
- 348:./Src/stm32f1xx_it.c **** }
- 349:./Src/stm32f1xx_it.c **** 
- 350:./Src/stm32f1xx_it.c **** //ADC1 -PC1-PC2-
- 351:./Src/stm32f1xx_it.c **** void DMA1_Channel1_IRQHandler(void)
- 352:./Src/stm32f1xx_it.c **** {
- 692              		.loc 1 352 0
- 693              		.cfi_startproc
- 694              		@ args = 0, pretend = 0, frame = 0
- 695              		@ frame_needed = 0, uses_anonymous_args = 0
- 696 0000 08B5     		push	{r3, lr}
- 697              	.LCFI14:
- 698              		.cfi_def_cfa_offset 8
- 699              		.cfi_offset 3, -8
- 700              		.cfi_offset 14, -4
- 353:./Src/stm32f1xx_it.c ****   HAL_DMA_IRQHandler(&hdma_adc1);
- 701              		.loc 1 353 0
- 702 0002 0248     		ldr	r0, .L64
- 703 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
- 704              	.LVL21:
- 705 0008 08BD     		pop	{r3, pc}
- 706              	.L65:
- 707 000a 00BF     		.align	2
- 708              	.L64:
- 709 000c 00000000 		.word	hdma_adc1
- 710              		.cfi_endproc
- 711              	.LFE82:
- 713              		.section	.text.DMA2_Channel4_5_IRQHandler,"ax",%progbits
- 714              		.align	2
- 715              		.global	DMA2_Channel4_5_IRQHandler
- 716              		.thumb
- 717              		.thumb_func
- 719              	DMA2_Channel4_5_IRQHandler:
- 720              	.LFB83:
- 354:./Src/stm32f1xx_it.c **** }
- 355:./Src/stm32f1xx_it.c **** //ADC3 -PC0-
- 356:./Src/stm32f1xx_it.c **** void DMA2_Channel4_5_IRQHandler(void)
- 357:./Src/stm32f1xx_it.c **** {
- 721              		.loc 1 357 0
- 722              		.cfi_startproc
- 723              		@ args = 0, pretend = 0, frame = 0
- 724              		@ frame_needed = 0, uses_anonymous_args = 0
- 725 0000 08B5     		push	{r3, lr}
- 726              	.LCFI15:
- 727              		.cfi_def_cfa_offset 8
- 728              		.cfi_offset 3, -8
-ARM GAS  /tmp/ccFqqBor.s 			page 26
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
-
-
- 716 000a 1A61     		str	r2, [r3, #16]
- 371:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&htim8, TIM_IT_CC2);
- 717              		.loc 1 371 0
- 718 000c 6FF00402 		mvn	r2, #4
- 719 0010 1A61     		str	r2, [r3, #16]
- 372:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&htim8, TIM_IT_CC3);
- 720              		.loc 1 372 0
- 721 0012 6FF00802 		mvn	r2, #8
- 722 0016 1A61     		str	r2, [r3, #16]
- 373:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&htim8, TIM_IT_CC4);
- 723              		.loc 1 373 0
- 724 0018 6FF01002 		mvn	r2, #16
- 725 001c 1A61     		str	r2, [r3, #16]
- 374:./Src/stm32f1xx_it.c ****   
- 375:./Src/stm32f1xx_it.c ****   PWM_L_ISR_Callback();  
- 726              		.loc 1 375 0
- 727 001e FFF7FEFF 		bl	PWM_L_ISR_Callback
- 728              	.LVL21:
- 376:./Src/stm32f1xx_it.c ****   HAL_ADC_Start(&hadc3);
- 729              		.loc 1 376 0
- 730 0022 0348     		ldr	r0, .L68+4
- 731 0024 FFF7FEFF 		bl	HAL_ADC_Start
- 732              	.LVL22:
- 733 0028 08BD     		pop	{r3, pc}
- 734              	.L69:
- 735 002a 00BF     		.align	2
- 736              	.L68:
- 737 002c 00000000 		.word	htim8
- 738 0030 00000000 		.word	hadc3
- 739              		.cfi_endproc
- 740              	.LFE83:
- 742              		.section	.text.DMA1_Channel1_IRQHandler,"ax",%progbits
- 743              		.align	2
- 744              		.global	DMA1_Channel1_IRQHandler
+ 731              		.loc 1 367 0
+ 732 0028 08BD     		pop	{r3, pc}
+ 733              	.L65:
+ 734 002a 00BF     		.align	2
+ 735              	.L64:
+ 736 002c 00000000 		.word	htim1
+ 737 0030 00000000 		.word	hadc1
+ 738              		.cfi_endproc
+ 739              	.LFE84:
+ 741              		.section	.text.TIM8_CC_IRQHandler,"ax",%progbits
+ 742              		.align	1
+ 743              		.global	TIM8_CC_IRQHandler
+ 744              		.syntax unified
  745              		.thumb
  746              		.thumb_func
- 748              	DMA1_Channel1_IRQHandler:
- 749              	.LFB84:
+ 747              		.fpu softvfp
+ 749              	TIM8_CC_IRQHandler:
+ 750              	.LFB85:
+ 368:./Src/stm32f1xx_it.c **** void TIM8_CC_IRQHandler(void)
+ 369:./Src/stm32f1xx_it.c **** {
+ 751              		.loc 1 369 0
+ 752              		.cfi_startproc
+ 753              		@ args = 0, pretend = 0, frame = 0
+ 754              		@ frame_needed = 0, uses_anonymous_args = 0
+ 755 0000 08B5     		push	{r3, lr}
+ 756              	.LCFI15:
+ 757              		.cfi_def_cfa_offset 8
+ 758              		.cfi_offset 3, -8
+ 759              		.cfi_offset 14, -4
+ 370:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&htim8, TIM_IT_CC1);
+ 760              		.loc 1 370 0
+ 761 0002 0A4B     		ldr	r3, .L68
+ 762 0004 1B68     		ldr	r3, [r3]
+ 763 0006 6FF00202 		mvn	r2, #2
+ 764 000a 1A61     		str	r2, [r3, #16]
+ 371:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&htim8, TIM_IT_CC2);
+ 765              		.loc 1 371 0
+ 766 000c 6FF00402 		mvn	r2, #4
+ 767 0010 1A61     		str	r2, [r3, #16]
+ 372:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&htim8, TIM_IT_CC3);
+ 768              		.loc 1 372 0
+ 769 0012 6FF00802 		mvn	r2, #8
+ 770 0016 1A61     		str	r2, [r3, #16]
+ARM GAS  /tmp/ccBcR8ou.s 			page 27
+
+
+ 373:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&htim8, TIM_IT_CC4);
+ 771              		.loc 1 373 0
+ 772 0018 6FF01002 		mvn	r2, #16
+ 773 001c 1A61     		str	r2, [r3, #16]
+ 374:./Src/stm32f1xx_it.c ****   
+ 375:./Src/stm32f1xx_it.c ****   PWM_L_ISR_Callback();  
+ 774              		.loc 1 375 0
+ 775 001e FFF7FEFF 		bl	PWM_L_ISR_Callback
+ 776              	.LVL21:
+ 376:./Src/stm32f1xx_it.c ****   HAL_ADC_Start(&hadc3);
+ 777              		.loc 1 376 0
+ 778 0022 0348     		ldr	r0, .L68+4
+ 779 0024 FFF7FEFF 		bl	HAL_ADC_Start
+ 780              	.LVL22:
  377:./Src/stm32f1xx_it.c **** }
+ 781              		.loc 1 377 0
+ 782 0028 08BD     		pop	{r3, pc}
+ 783              	.L69:
+ 784 002a 00BF     		.align	2
+ 785              	.L68:
+ 786 002c 00000000 		.word	htim8
+ 787 0030 00000000 		.word	hadc3
+ 788              		.cfi_endproc
+ 789              	.LFE85:
+ 791              		.section	.text.DMA1_Channel1_IRQHandler,"ax",%progbits
+ 792              		.align	1
+ 793              		.global	DMA1_Channel1_IRQHandler
+ 794              		.syntax unified
+ 795              		.thumb
+ 796              		.thumb_func
+ 797              		.fpu softvfp
+ 799              	DMA1_Channel1_IRQHandler:
+ 800              	.LFB86:
  378:./Src/stm32f1xx_it.c **** 
  379:./Src/stm32f1xx_it.c **** //ADC1 -PC1-PC2-
  380:./Src/stm32f1xx_it.c **** void DMA1_Channel1_IRQHandler(void)
  381:./Src/stm32f1xx_it.c **** {
- 750              		.loc 1 381 0
- 751              		.cfi_startproc
- 752              		@ args = 0, pretend = 0, frame = 0
- 753              		@ frame_needed = 0, uses_anonymous_args = 0
-<<<<<<< HEAD
- 754 0000 08B5     		push	{r3, lr}
- 755              	.LCFI16:
- 756              		.cfi_def_cfa_offset 8
- 757              		.cfi_offset 3, -8
- 758              		.cfi_offset 14, -4
+ 801              		.loc 1 381 0
+ 802              		.cfi_startproc
+ 803              		@ args = 0, pretend = 0, frame = 0
+ 804              		@ frame_needed = 0, uses_anonymous_args = 0
+ 805 0000 08B5     		push	{r3, lr}
+ 806              	.LCFI16:
+ 807              		.cfi_def_cfa_offset 8
+ 808              		.cfi_offset 3, -8
+ 809              		.cfi_offset 14, -4
  382:./Src/stm32f1xx_it.c ****   HAL_DMA_IRQHandler(&hdma_adc1); 
- 759              		.loc 1 382 0
- 760 0002 0248     		ldr	r0, .L72
- 761 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
- 762              	.LVL23:
-ARM GAS  /tmp/ccV25QEa.s 			page 27
-
-=======
- 754              		@ link register save eliminated.
- 367:./Src/stm32f1xx_it.c ****   //DebugPin4_ON();
- 368:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&Tim3PID, TIM_IT_UPDATE);
- 755              		.loc 1 368 0
- 756 0000 024B     		ldr	r3, .L71
- 757 0002 1B68     		ldr	r3, [r3]
- 758 0004 6FF00102 		mvn	r2, #1
- 759 0008 1A61     		str	r2, [r3, #16]
- 760 000a 7047     		bx	lr
- 761              	.L72:
- 762              		.align	2
- 763              	.L71:
- 764 000c 00000000 		.word	Tim3PID
- 765              		.cfi_endproc
- 766              	.LFE84:
- 768              		.text
- 769              	.Letext0:
- 770              		.file 3 "/home/niklas/gcc-arm-none-eabi-5_4-2016q3/arm-none-eabi/include/machine/_default_types.h"
- 771              		.file 4 "/home/niklas/gcc-arm-none-eabi-5_4-2016q3/arm-none-eabi/include/sys/_stdint.h"
- 772              		.file 5 "./Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
- 773              		.file 6 "./Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
- 774              		.file 7 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 775              		.file 8 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
- 776              		.file 9 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h"
- 777              		.file 10 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h"
-ARM GAS  /tmp/ccFqqBor.s 			page 27
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
-
- 763 0008 08BD     		pop	{r3, pc}
- 764              	.L73:
- 765 000a 00BF     		.align	2
- 766              	.L72:
- 767 000c 00000000 		.word	hdma_adc1
- 768              		.cfi_endproc
- 769              	.LFE84:
- 771              		.section	.text.DMA2_Channel4_5_IRQHandler,"ax",%progbits
- 772              		.align	2
- 773              		.global	DMA2_Channel4_5_IRQHandler
- 774              		.thumb
- 775              		.thumb_func
- 777              	DMA2_Channel4_5_IRQHandler:
- 778              	.LFB85:
+ 810              		.loc 1 382 0
+ 811 0002 0248     		ldr	r0, .L72
+ 812 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
+ 813              	.LVL23:
  383:./Src/stm32f1xx_it.c **** }
+ 814              		.loc 1 383 0
+ 815 0008 08BD     		pop	{r3, pc}
+ 816              	.L73:
+ 817 000a 00BF     		.align	2
+ 818              	.L72:
+ARM GAS  /tmp/ccBcR8ou.s 			page 28
+
+
+ 819 000c 00000000 		.word	hdma_adc1
+ 820              		.cfi_endproc
+ 821              	.LFE86:
+ 823              		.section	.text.DMA2_Channel4_5_IRQHandler,"ax",%progbits
+ 824              		.align	1
+ 825              		.global	DMA2_Channel4_5_IRQHandler
+ 826              		.syntax unified
+ 827              		.thumb
+ 828              		.thumb_func
+ 829              		.fpu softvfp
+ 831              	DMA2_Channel4_5_IRQHandler:
+ 832              	.LFB87:
  384:./Src/stm32f1xx_it.c **** //ADC3 -PC0-
  385:./Src/stm32f1xx_it.c **** void DMA2_Channel4_5_IRQHandler(void)
  386:./Src/stm32f1xx_it.c **** {
- 779              		.loc 1 386 0
- 780              		.cfi_startproc
- 781              		@ args = 0, pretend = 0, frame = 0
- 782              		@ frame_needed = 0, uses_anonymous_args = 0
- 783 0000 08B5     		push	{r3, lr}
- 784              	.LCFI17:
- 785              		.cfi_def_cfa_offset 8
- 786              		.cfi_offset 3, -8
- 787              		.cfi_offset 14, -4
+ 833              		.loc 1 386 0
+ 834              		.cfi_startproc
+ 835              		@ args = 0, pretend = 0, frame = 0
+ 836              		@ frame_needed = 0, uses_anonymous_args = 0
+ 837 0000 08B5     		push	{r3, lr}
+ 838              	.LCFI17:
+ 839              		.cfi_def_cfa_offset 8
+ 840              		.cfi_offset 3, -8
+ 841              		.cfi_offset 14, -4
  387:./Src/stm32f1xx_it.c ****   HAL_DMA_IRQHandler(&hdma_adc3);
- 788              		.loc 1 387 0
- 789 0002 0248     		ldr	r0, .L76
- 790 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
- 791              	.LVL24:
- 792 0008 08BD     		pop	{r3, pc}
- 793              	.L77:
- 794 000a 00BF     		.align	2
- 795              	.L76:
- 796 000c 00000000 		.word	hdma_adc3
- 797              		.cfi_endproc
- 798              	.LFE85:
- 800              		.section	.text.TIM3_IRQHandler,"ax",%progbits
- 801              		.align	2
- 802              		.global	TIM3_IRQHandler
- 803              		.thumb
- 804              		.thumb_func
- 806              	TIM3_IRQHandler:
- 807              	.LFB86:
+ 842              		.loc 1 387 0
+ 843 0002 0248     		ldr	r0, .L76
+ 844 0004 FFF7FEFF 		bl	HAL_DMA_IRQHandler
+ 845              	.LVL24:
  388:./Src/stm32f1xx_it.c **** }
+ 846              		.loc 1 388 0
+ 847 0008 08BD     		pop	{r3, pc}
+ 848              	.L77:
+ 849 000a 00BF     		.align	2
+ 850              	.L76:
+ 851 000c 00000000 		.word	hdma_adc3
+ 852              		.cfi_endproc
+ 853              	.LFE87:
+ 855              		.section	.text.TIM3_IRQHandler,"ax",%progbits
+ 856              		.align	1
+ 857              		.global	TIM3_IRQHandler
+ 858              		.syntax unified
+ 859              		.thumb
+ 860              		.thumb_func
+ 861              		.fpu softvfp
+ 863              	TIM3_IRQHandler:
+ 864              	.LFB88:
  389:./Src/stm32f1xx_it.c **** 
  390:./Src/stm32f1xx_it.c **** 
  391:./Src/stm32f1xx_it.c **** //extern volatile __IO int32_t testVelR;
@@ -2001,182 +1675,122 @@ ARM GAS  /tmp/ccFqqBor.s 			page 1
  393:./Src/stm32f1xx_it.c **** //PID
  394:./Src/stm32f1xx_it.c **** void TIM3_IRQHandler(void)
  395:./Src/stm32f1xx_it.c **** {
- 808              		.loc 1 395 0
- 809              		.cfi_startproc
- 810              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccV25QEa.s 			page 28
+ 865              		.loc 1 395 0
+ 866              		.cfi_startproc
+ 867              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/ccBcR8ou.s 			page 29
 
-<<<<<<< HEAD
 
- 811              		@ frame_needed = 0, uses_anonymous_args = 0
- 812              		@ link register save eliminated.
+ 868              		@ frame_needed = 0, uses_anonymous_args = 0
+ 869              		@ link register save eliminated.
  396:./Src/stm32f1xx_it.c ****   //DebugPin4_ON(); 
  397:./Src/stm32f1xx_it.c ****   __HAL_TIM_CLEAR_IT(&Tim3PID, TIM_IT_UPDATE);
- 813              		.loc 1 397 0
- 814 0000 024B     		ldr	r3, .L79
- 815 0002 1B68     		ldr	r3, [r3]
- 816 0004 6FF00102 		mvn	r2, #1
- 817 0008 1A61     		str	r2, [r3, #16]
- 818 000a 7047     		bx	lr
- 819              	.L80:
- 820              		.align	2
- 821              	.L79:
- 822 000c 00000000 		.word	Tim3PID
- 823              		.cfi_endproc
- 824              	.LFE86:
- 826              		.text
- 827              	.Letext0:
- 828              		.file 3 "/home/niklas/gcc-arm-none-eabi-5_4-2016q3/arm-none-eabi/include/machine/_default_types.h"
- 829              		.file 4 "/home/niklas/gcc-arm-none-eabi-5_4-2016q3/arm-none-eabi/include/sys/_stdint.h"
- 830              		.file 5 "./Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
- 831              		.file 6 "./Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
- 832              		.file 7 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 833              		.file 8 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
- 834              		.file 9 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h"
- 835              		.file 10 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h"
- 836              		.file 11 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
- 837              		.file 12 "./Drivers/CMSIS/Include/core_cm3.h"
- 838              		.file 13 "./Inc/motor_R.h"
- 839              		.file 14 "./Inc/motor_L.h"
- 840              		.file 15 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
- 841              		.file 16 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
-ARM GAS  /tmp/ccV25QEa.s 			page 29
-=======
- 778              		.file 11 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
- 779              		.file 12 "./Drivers/CMSIS/Include/core_cm3.h"
- 780              		.file 13 "./Inc/motor_R.h"
- 781              		.file 14 "./Inc/motor_L.h"
- 782              		.file 15 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
- 783              		.file 16 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
-ARM GAS  /tmp/ccFqqBor.s 			page 28
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
+ 870              		.loc 1 397 0
+ 871 0000 024B     		ldr	r3, .L79
+ 872 0002 1B68     		ldr	r3, [r3]
+ 873 0004 6FF00102 		mvn	r2, #1
+ 874 0008 1A61     		str	r2, [r3, #16]
+ 398:./Src/stm32f1xx_it.c ****   //DebugPin4_OFF(); 
+ 399:./Src/stm32f1xx_it.c **** //testVelR = 0;  
+ 400:./Src/stm32f1xx_it.c **** }
+ 875              		.loc 1 400 0
+ 876 000a 7047     		bx	lr
+ 877              	.L80:
+ 878              		.align	2
+ 879              	.L79:
+ 880 000c 00000000 		.word	Tim3PID
+ 881              		.cfi_endproc
+ 882              	.LFE88:
+ 884              		.text
+ 885              	.Letext0:
+ 886              		.file 3 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 887              		.file 4 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 888              		.file 5 "./Drivers/CMSIS/Include/core_cm3.h"
+ 889              		.file 6 "./Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 890              		.file 7 "./Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h"
+ 891              		.file 8 "/usr/arm-none-eabi/include/sys/lock.h"
+ 892              		.file 9 "/usr/arm-none-eabi/include/sys/_types.h"
+ 893              		.file 10 "/usr/lib/gcc/arm-none-eabi/7.2.0/include/stddef.h"
+ 894              		.file 11 "/usr/arm-none-eabi/include/sys/reent.h"
+ 895              		.file 12 "./Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 896              		.file 13 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 897              		.file 14 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 898              		.file 15 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h"
+ 899              		.file 16 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h"
+ 900              		.file 17 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
+ 901              		.file 18 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 902              		.file 19 "./Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ 903              		.file 20 "./Inc/motor_R.h"
+ 904              		.file 21 "./Inc/motor_L.h"
+ARM GAS  /tmp/ccBcR8ou.s 			page 30
 
 
 DEFINED SYMBOLS
-                            *ABS*:00000000 stm32f1xx_it.c
-<<<<<<< HEAD
-     /tmp/ccV25QEa.s:20     .text.NMI_Handler:00000000 $t
-     /tmp/ccV25QEa.s:25     .text.NMI_Handler:00000000 NMI_Handler
-     /tmp/ccV25QEa.s:72     .text.HardFault_Handler:00000000 $t
-     /tmp/ccV25QEa.s:77     .text.HardFault_Handler:00000000 HardFault_Handler
-     /tmp/ccV25QEa.s:101    .text.MemManage_Handler:00000000 $t
-     /tmp/ccV25QEa.s:106    .text.MemManage_Handler:00000000 MemManage_Handler
-     /tmp/ccV25QEa.s:130    .text.BusFault_Handler:00000000 $t
-     /tmp/ccV25QEa.s:135    .text.BusFault_Handler:00000000 BusFault_Handler
-     /tmp/ccV25QEa.s:159    .text.UsageFault_Handler:00000000 $t
-     /tmp/ccV25QEa.s:164    .text.UsageFault_Handler:00000000 UsageFault_Handler
-     /tmp/ccV25QEa.s:188    .text.SVC_Handler:00000000 $t
-     /tmp/ccV25QEa.s:193    .text.SVC_Handler:00000000 SVC_Handler
-     /tmp/ccV25QEa.s:238    .text.DebugMon_Handler:00000000 $t
-     /tmp/ccV25QEa.s:243    .text.DebugMon_Handler:00000000 DebugMon_Handler
-     /tmp/ccV25QEa.s:255    .text.PendSV_Handler:00000000 $t
-     /tmp/ccV25QEa.s:260    .text.PendSV_Handler:00000000 PendSV_Handler
-     /tmp/ccV25QEa.s:305    .text.SysTick_Handler:00000000 $t
-     /tmp/ccV25QEa.s:310    .text.SysTick_Handler:00000000 SysTick_Handler
-     /tmp/ccV25QEa.s:332    .text.I2C1_EV_IRQHandler:00000000 $t
-     /tmp/ccV25QEa.s:337    .text.I2C1_EV_IRQHandler:00000000 I2C1_EV_IRQHandler
-     /tmp/ccV25QEa.s:356    .text.I2C1_EV_IRQHandler:0000000c $d
-     /tmp/ccV25QEa.s:361    .text.I2C1_ER_IRQHandler:00000000 $t
-     /tmp/ccV25QEa.s:366    .text.I2C1_ER_IRQHandler:00000000 I2C1_ER_IRQHandler
-     /tmp/ccV25QEa.s:385    .text.I2C1_ER_IRQHandler:0000000c $d
-     /tmp/ccV25QEa.s:390    .text.DMA1_Channel4_IRQHandler:00000000 $t
-     /tmp/ccV25QEa.s:395    .text.DMA1_Channel4_IRQHandler:00000000 DMA1_Channel4_IRQHandler
-     /tmp/ccV25QEa.s:414    .text.DMA1_Channel4_IRQHandler:0000000c $d
-     /tmp/ccV25QEa.s:419    .text.DMA1_Channel5_IRQHandler:00000000 $t
-     /tmp/ccV25QEa.s:424    .text.DMA1_Channel5_IRQHandler:00000000 DMA1_Channel5_IRQHandler
-     /tmp/ccV25QEa.s:443    .text.DMA1_Channel5_IRQHandler:0000000c $d
-     /tmp/ccV25QEa.s:448    .text.DMA1_Channel6_IRQHandler:00000000 $t
-     /tmp/ccV25QEa.s:453    .text.DMA1_Channel6_IRQHandler:00000000 DMA1_Channel6_IRQHandler
-     /tmp/ccV25QEa.s:472    .text.DMA1_Channel6_IRQHandler:0000000c $d
-     /tmp/ccV25QEa.s:477    .text.DMA1_Channel7_IRQHandler:00000000 $t
-     /tmp/ccV25QEa.s:482    .text.DMA1_Channel7_IRQHandler:00000000 DMA1_Channel7_IRQHandler
-     /tmp/ccV25QEa.s:501    .text.DMA1_Channel7_IRQHandler:0000000c $d
-     /tmp/ccV25QEa.s:506    .text.I2C2_ER_IRQHandler:00000000 $t
-     /tmp/ccV25QEa.s:511    .text.I2C2_ER_IRQHandler:00000000 I2C2_ER_IRQHandler
-     /tmp/ccV25QEa.s:530    .text.I2C2_ER_IRQHandler:0000000c $d
-     /tmp/ccV25QEa.s:535    .text.EXTI15_10_IRQHandler:00000000 $t
-     /tmp/ccV25QEa.s:540    .text.EXTI15_10_IRQHandler:00000000 EXTI15_10_IRQHandler
-     /tmp/ccV25QEa.s:587    .text.EXTI15_10_IRQHandler:0000003c $d
-     /tmp/ccV25QEa.s:592    .text.EXTI9_5_IRQHandler:00000000 $t
-     /tmp/ccV25QEa.s:597    .text.EXTI9_5_IRQHandler:00000000 EXTI9_5_IRQHandler
-     /tmp/ccV25QEa.s:644    .text.EXTI9_5_IRQHandler:00000034 $d
-     /tmp/ccV25QEa.s:649    .text.TIM1_CC_IRQHandler:00000000 $t
-     /tmp/ccV25QEa.s:654    .text.TIM1_CC_IRQHandler:00000000 TIM1_CC_IRQHandler
-     /tmp/ccV25QEa.s:690    .text.TIM1_CC_IRQHandler:0000002c $d
-     /tmp/ccV25QEa.s:696    .text.TIM8_CC_IRQHandler:00000000 $t
-     /tmp/ccV25QEa.s:701    .text.TIM8_CC_IRQHandler:00000000 TIM8_CC_IRQHandler
-     /tmp/ccV25QEa.s:737    .text.TIM8_CC_IRQHandler:0000002c $d
-     /tmp/ccV25QEa.s:743    .text.DMA1_Channel1_IRQHandler:00000000 $t
-     /tmp/ccV25QEa.s:748    .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
-     /tmp/ccV25QEa.s:767    .text.DMA1_Channel1_IRQHandler:0000000c $d
-     /tmp/ccV25QEa.s:772    .text.DMA2_Channel4_5_IRQHandler:00000000 $t
-ARM GAS  /tmp/ccV25QEa.s 			page 30
-=======
-     /tmp/ccFqqBor.s:20     .text.NMI_Handler:00000000 $t
-     /tmp/ccFqqBor.s:25     .text.NMI_Handler:00000000 NMI_Handler
-     /tmp/ccFqqBor.s:72     .text.HardFault_Handler:00000000 $t
-     /tmp/ccFqqBor.s:77     .text.HardFault_Handler:00000000 HardFault_Handler
-     /tmp/ccFqqBor.s:101    .text.MemManage_Handler:00000000 $t
-     /tmp/ccFqqBor.s:106    .text.MemManage_Handler:00000000 MemManage_Handler
-     /tmp/ccFqqBor.s:130    .text.BusFault_Handler:00000000 $t
-     /tmp/ccFqqBor.s:135    .text.BusFault_Handler:00000000 BusFault_Handler
-     /tmp/ccFqqBor.s:159    .text.UsageFault_Handler:00000000 $t
-     /tmp/ccFqqBor.s:164    .text.UsageFault_Handler:00000000 UsageFault_Handler
-     /tmp/ccFqqBor.s:188    .text.SVC_Handler:00000000 $t
-     /tmp/ccFqqBor.s:193    .text.SVC_Handler:00000000 SVC_Handler
-     /tmp/ccFqqBor.s:238    .text.DebugMon_Handler:00000000 $t
-     /tmp/ccFqqBor.s:243    .text.DebugMon_Handler:00000000 DebugMon_Handler
-     /tmp/ccFqqBor.s:255    .text.PendSV_Handler:00000000 $t
-     /tmp/ccFqqBor.s:260    .text.PendSV_Handler:00000000 PendSV_Handler
-     /tmp/ccFqqBor.s:305    .text.SysTick_Handler:00000000 $t
-     /tmp/ccFqqBor.s:310    .text.SysTick_Handler:00000000 SysTick_Handler
-     /tmp/ccFqqBor.s:332    .text.I2C1_EV_IRQHandler:00000000 $t
-     /tmp/ccFqqBor.s:337    .text.I2C1_EV_IRQHandler:00000000 I2C1_EV_IRQHandler
-     /tmp/ccFqqBor.s:356    .text.I2C1_EV_IRQHandler:0000000c $d
-     /tmp/ccFqqBor.s:361    .text.I2C1_ER_IRQHandler:00000000 $t
-     /tmp/ccFqqBor.s:366    .text.I2C1_ER_IRQHandler:00000000 I2C1_ER_IRQHandler
-     /tmp/ccFqqBor.s:385    .text.I2C1_ER_IRQHandler:0000000c $d
-     /tmp/ccFqqBor.s:390    .text.DMA1_Channel3_IRQHandler:00000000 $t
-     /tmp/ccFqqBor.s:395    .text.DMA1_Channel3_IRQHandler:00000000 DMA1_Channel3_IRQHandler
-     /tmp/ccFqqBor.s:414    .text.DMA1_Channel3_IRQHandler:0000000c $d
-     /tmp/ccFqqBor.s:419    .text.DMA1_Channel2_IRQHandler:00000000 $t
-     /tmp/ccFqqBor.s:424    .text.DMA1_Channel2_IRQHandler:00000000 DMA1_Channel2_IRQHandler
-     /tmp/ccFqqBor.s:443    .text.DMA1_Channel2_IRQHandler:0000000c $d
-     /tmp/ccFqqBor.s:448    .text.I2C2_ER_IRQHandler:00000000 $t
-     /tmp/ccFqqBor.s:453    .text.I2C2_ER_IRQHandler:00000000 I2C2_ER_IRQHandler
-     /tmp/ccFqqBor.s:472    .text.I2C2_ER_IRQHandler:0000000c $d
-     /tmp/ccFqqBor.s:477    .text.EXTI15_10_IRQHandler:00000000 $t
-     /tmp/ccFqqBor.s:482    .text.EXTI15_10_IRQHandler:00000000 EXTI15_10_IRQHandler
-     /tmp/ccFqqBor.s:529    .text.EXTI15_10_IRQHandler:0000003c $d
-     /tmp/ccFqqBor.s:534    .text.EXTI9_5_IRQHandler:00000000 $t
-     /tmp/ccFqqBor.s:539    .text.EXTI9_5_IRQHandler:00000000 EXTI9_5_IRQHandler
-     /tmp/ccFqqBor.s:586    .text.EXTI9_5_IRQHandler:00000034 $d
-     /tmp/ccFqqBor.s:591    .text.TIM1_CC_IRQHandler:00000000 $t
-     /tmp/ccFqqBor.s:596    .text.TIM1_CC_IRQHandler:00000000 TIM1_CC_IRQHandler
-     /tmp/ccFqqBor.s:632    .text.TIM1_CC_IRQHandler:0000002c $d
-     /tmp/ccFqqBor.s:638    .text.TIM8_CC_IRQHandler:00000000 $t
-     /tmp/ccFqqBor.s:643    .text.TIM8_CC_IRQHandler:00000000 TIM8_CC_IRQHandler
-     /tmp/ccFqqBor.s:679    .text.TIM8_CC_IRQHandler:0000002c $d
-     /tmp/ccFqqBor.s:685    .text.DMA1_Channel1_IRQHandler:00000000 $t
-     /tmp/ccFqqBor.s:690    .text.DMA1_Channel1_IRQHandler:00000000 DMA1_Channel1_IRQHandler
-     /tmp/ccFqqBor.s:709    .text.DMA1_Channel1_IRQHandler:0000000c $d
-     /tmp/ccFqqBor.s:714    .text.DMA2_Channel4_5_IRQHandler:00000000 $t
-     /tmp/ccFqqBor.s:719    .text.DMA2_Channel4_5_IRQHandler:00000000 DMA2_Channel4_5_IRQHandler
-     /tmp/ccFqqBor.s:738    .text.DMA2_Channel4_5_IRQHandler:0000000c $d
-     /tmp/ccFqqBor.s:743    .text.TIM3_IRQHandler:00000000 $t
-     /tmp/ccFqqBor.s:748    .text.TIM3_IRQHandler:00000000 TIM3_IRQHandler
-     /tmp/ccFqqBor.s:764    .text.TIM3_IRQHandler:0000000c $d
-                     .debug_frame:00000010 $d
-ARM GAS  /tmp/ccFqqBor.s 			page 29
->>>>>>> 0ef1b90... ADD: over discharge detection, over current protection
+                            *ABS*:0000000000000000 stm32f1xx_it.c
+     /tmp/ccBcR8ou.s:16     .text.NMI_Handler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:23     .text.NMI_Handler:0000000000000000 NMI_Handler
+     /tmp/ccBcR8ou.s:70     .text.HardFault_Handler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:77     .text.HardFault_Handler:0000000000000000 HardFault_Handler
+     /tmp/ccBcR8ou.s:101    .text.MemManage_Handler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:108    .text.MemManage_Handler:0000000000000000 MemManage_Handler
+     /tmp/ccBcR8ou.s:132    .text.BusFault_Handler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:139    .text.BusFault_Handler:0000000000000000 BusFault_Handler
+     /tmp/ccBcR8ou.s:163    .text.UsageFault_Handler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:170    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
+     /tmp/ccBcR8ou.s:194    .text.SVC_Handler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:201    .text.SVC_Handler:0000000000000000 SVC_Handler
+     /tmp/ccBcR8ou.s:246    .text.DebugMon_Handler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:253    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
+     /tmp/ccBcR8ou.s:266    .text.PendSV_Handler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:273    .text.PendSV_Handler:0000000000000000 PendSV_Handler
+     /tmp/ccBcR8ou.s:318    .text.SysTick_Handler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:325    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+     /tmp/ccBcR8ou.s:348    .text.I2C1_EV_IRQHandler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:355    .text.I2C1_EV_IRQHandler:0000000000000000 I2C1_EV_IRQHandler
+     /tmp/ccBcR8ou.s:375    .text.I2C1_EV_IRQHandler:000000000000000c $d
+     /tmp/ccBcR8ou.s:380    .text.I2C1_ER_IRQHandler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:387    .text.I2C1_ER_IRQHandler:0000000000000000 I2C1_ER_IRQHandler
+     /tmp/ccBcR8ou.s:407    .text.I2C1_ER_IRQHandler:000000000000000c $d
+     /tmp/ccBcR8ou.s:412    .text.DMA1_Channel4_IRQHandler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:419    .text.DMA1_Channel4_IRQHandler:0000000000000000 DMA1_Channel4_IRQHandler
+     /tmp/ccBcR8ou.s:439    .text.DMA1_Channel4_IRQHandler:000000000000000c $d
+     /tmp/ccBcR8ou.s:444    .text.DMA1_Channel5_IRQHandler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:451    .text.DMA1_Channel5_IRQHandler:0000000000000000 DMA1_Channel5_IRQHandler
+     /tmp/ccBcR8ou.s:471    .text.DMA1_Channel5_IRQHandler:000000000000000c $d
+     /tmp/ccBcR8ou.s:476    .text.DMA1_Channel6_IRQHandler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:483    .text.DMA1_Channel6_IRQHandler:0000000000000000 DMA1_Channel6_IRQHandler
+     /tmp/ccBcR8ou.s:503    .text.DMA1_Channel6_IRQHandler:000000000000000c $d
+     /tmp/ccBcR8ou.s:508    .text.DMA1_Channel7_IRQHandler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:515    .text.DMA1_Channel7_IRQHandler:0000000000000000 DMA1_Channel7_IRQHandler
+     /tmp/ccBcR8ou.s:535    .text.DMA1_Channel7_IRQHandler:000000000000000c $d
+     /tmp/ccBcR8ou.s:540    .text.I2C2_ER_IRQHandler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:547    .text.I2C2_ER_IRQHandler:0000000000000000 I2C2_ER_IRQHandler
+     /tmp/ccBcR8ou.s:567    .text.I2C2_ER_IRQHandler:000000000000000c $d
+     /tmp/ccBcR8ou.s:572    .text.EXTI15_10_IRQHandler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:579    .text.EXTI15_10_IRQHandler:0000000000000000 EXTI15_10_IRQHandler
+     /tmp/ccBcR8ou.s:627    .text.EXTI15_10_IRQHandler:000000000000003c $d
+     /tmp/ccBcR8ou.s:632    .text.EXTI9_5_IRQHandler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:639    .text.EXTI9_5_IRQHandler:0000000000000000 EXTI9_5_IRQHandler
+     /tmp/ccBcR8ou.s:687    .text.EXTI9_5_IRQHandler:0000000000000034 $d
+     /tmp/ccBcR8ou.s:692    .text.TIM1_CC_IRQHandler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:699    .text.TIM1_CC_IRQHandler:0000000000000000 TIM1_CC_IRQHandler
+     /tmp/ccBcR8ou.s:736    .text.TIM1_CC_IRQHandler:000000000000002c $d
+     /tmp/ccBcR8ou.s:742    .text.TIM8_CC_IRQHandler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:749    .text.TIM8_CC_IRQHandler:0000000000000000 TIM8_CC_IRQHandler
+     /tmp/ccBcR8ou.s:786    .text.TIM8_CC_IRQHandler:000000000000002c $d
+     /tmp/ccBcR8ou.s:792    .text.DMA1_Channel1_IRQHandler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:799    .text.DMA1_Channel1_IRQHandler:0000000000000000 DMA1_Channel1_IRQHandler
+     /tmp/ccBcR8ou.s:819    .text.DMA1_Channel1_IRQHandler:000000000000000c $d
+     /tmp/ccBcR8ou.s:824    .text.DMA2_Channel4_5_IRQHandler:0000000000000000 $t
+ARM GAS  /tmp/ccBcR8ou.s 			page 31
 
 
-     /tmp/ccV25QEa.s:777    .text.DMA2_Channel4_5_IRQHandler:00000000 DMA2_Channel4_5_IRQHandler
-     /tmp/ccV25QEa.s:796    .text.DMA2_Channel4_5_IRQHandler:0000000c $d
-     /tmp/ccV25QEa.s:801    .text.TIM3_IRQHandler:00000000 $t
-     /tmp/ccV25QEa.s:806    .text.TIM3_IRQHandler:00000000 TIM3_IRQHandler
-     /tmp/ccV25QEa.s:822    .text.TIM3_IRQHandler:0000000c $d
-                     .debug_frame:00000010 $d
+     /tmp/ccBcR8ou.s:831    .text.DMA2_Channel4_5_IRQHandler:0000000000000000 DMA2_Channel4_5_IRQHandler
+     /tmp/ccBcR8ou.s:851    .text.DMA2_Channel4_5_IRQHandler:000000000000000c $d
+     /tmp/ccBcR8ou.s:856    .text.TIM3_IRQHandler:0000000000000000 $t
+     /tmp/ccBcR8ou.s:863    .text.TIM3_IRQHandler:0000000000000000 TIM3_IRQHandler
+     /tmp/ccBcR8ou.s:880    .text.TIM3_IRQHandler:000000000000000c $d
+                     .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
 MotorR_stop
